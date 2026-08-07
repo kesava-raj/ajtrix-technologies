@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: #ffffff;
+  --text-primary: #121543;
+  --logo-text: #121543;
+  --nav-bg: rgba(0, 0, 0, 0.05);
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --nav-link-color: rgba(18, 21, 67, 0.7);
+  --nav-link-hover: #121543;
+  --btn-bg: #121543;
+  --btn-hover: #1e2463;
+  --btn-text: #ffffff;
+  --logo-asterisk: #4f55c4;
+  --theme-toggle-color: #121543;
+  
+  /* Glassmorphism Hover (Dark glass for light theme) */
+  --glass-bg-hover: rgba(0, 0, 0, 0.06);
+  --glass-border-hover: rgba(0, 0, 0, 0.12);
+  --glass-shadow-hover: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+  --bg-color: #050512;
+  --text-primary: #ffffff;
+  --logo-text: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.05);
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --nav-link-color: rgba(255, 255, 255, 0.7);
+  --nav-link-hover: #ffffff;
+  --btn-bg: #ffffff;
+  --btn-hover: #e0e0e0;
+  --btn-text: #121543;
+  --logo-asterisk: #8484ff;
+  --theme-toggle-color: #ffffff;
+
+  /* Glassmorphism Hover (Light glass for dark theme) */
+  --glass-bg-hover: rgba(255, 255, 255, 0.15);
+  --glass-border-hover: rgba(255, 255, 255, 0.25);
+  --glass-shadow-hover: rgba(0, 0, 0, 0.2);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

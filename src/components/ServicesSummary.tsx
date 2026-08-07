@@ -14,8 +14,8 @@ const services = [
     icon: <Cpu className="w-6 h-6 text-indigo-500 dark:text-indigo-400" />
   },
   {
-    title: 'Business Automation & Lead Generation',
-    description: 'End-to-end Playwright/n8n outreach pipelines and custom CRMs designed to scale your revenue.',
+    title: 'Business Automation & Workflow Optimization',
+    description: 'End-to-end Playwright/n8n pipelines and custom CRMs designed to streamline your internal operations.',
     icon: <Workflow className="w-6 h-6 text-indigo-500 dark:text-indigo-400" />
   },
   {

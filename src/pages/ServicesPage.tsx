@@ -15,9 +15,9 @@ const detailedServices = [
     icon: <Cpu className="w-10 h-10 text-indigo-500" />
   },
   {
-    title: 'Business Automation & Lead Generation',
-    description: 'Scale your revenue without scaling your headcount. We build end-to-end automation pipelines using tools like Playwright and n8n to supercharge your outreach. Coupled with custom CRMs, we ensure no lead falls through the cracks.',
-    features: ['Playwright & n8n Automation', 'Outreach Pipelines', 'Custom CRM Development', 'Workflow Optimization'],
+    title: 'Business Automation & Workflow Optimization',
+    description: 'Scale your efficiency without scaling your headcount. We build end-to-end automation pipelines using tools like Playwright and n8n to eliminate manual tasks and streamline your data flows. Coupled with custom CRMs, we ensure your internal processes run seamlessly around the clock.',
+    features: ['Playwright & n8n Automation', 'Process Automation', 'Custom CRM Development', 'Workflow Optimization'],
     icon: <Workflow className="w-10 h-10 text-indigo-500" />
   },
   {

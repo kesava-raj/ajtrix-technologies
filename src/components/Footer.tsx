@@ -12,9 +12,8 @@ const Footer: React.FC = () => {
         {/* Left Side: Brand and CTA */}
         <div className="text-center md:text-left space-y-6 flex-1">
           <div className="navbar-logo inline-block mb-4">
-            <a href="#" className="flex items-center text-3xl font-bold">
-              <span className="logo-text text-white">ajtrix</span>
-              <span className="logo-asterisk text-white">*</span>
+            <a href="#" className="flex items-center">
+              <img src="/logo-dark.png" alt="ajtrix" className="h-10 object-contain" />
             </a>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">

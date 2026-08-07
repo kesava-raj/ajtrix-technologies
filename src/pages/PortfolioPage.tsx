@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowUpRight, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const featuredWorks = [
   {
@@ -111,11 +111,10 @@ const PortfolioPage: React.FC = () => {
 
               {/* Content Container */}
               <div className="p-8 md:p-10">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold rounded-full">
+                <div className="mb-4">
+                  <span className="inline-block px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold rounded-full">
                     {project.category}
                   </span>
-                  <ArrowUpRight className="w-6 h-6 text-gray-400 group-hover:text-indigo-500 transition-colors" />
                 </div>
                 
                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">

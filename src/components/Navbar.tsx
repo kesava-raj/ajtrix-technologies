@@ -26,11 +26,14 @@ const Navbar: React.FC = () => {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          {/* Logo Placeholder */}
+          {/* Logo */}
           <div className="navbar-logo">
             <Link to="/">
-              <span className="logo-text">ajtrix</span>
-              <span className="logo-asterisk">*</span>
+              {theme === 'light' ? (
+                <img src="/logo-light.png" alt="ajtrix" className="h-10 object-contain" />
+              ) : (
+                <img src="/logo-dark.png" alt="ajtrix" className="h-10 object-contain" />
+              )}
             </Link>
           </div>
 

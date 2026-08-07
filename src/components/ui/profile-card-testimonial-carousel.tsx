@@ -3,10 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Globe,
-  Mail,
-  Link as LinkIcon,
-  MessageSquare,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";

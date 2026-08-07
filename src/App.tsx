@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import TeamSection from './components/TeamSection';
 import Footer from './components/Footer';
 import { useTheme } from './context/ThemeContext';
-import { ThemeProvider } from './context/ThemeContext';
 import { ContactModalProvider } from './context/ContactContext';
 import ContactModal from './components/ui/contact-modal';
 import './App.css';

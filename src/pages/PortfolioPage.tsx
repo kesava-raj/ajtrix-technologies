@@ -1,59 +1,62 @@
 import React, { useEffect } from 'react';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
-const Github = ({ className }: { className?: string }) => (
-  <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-);
-
-const allProjects = [
+const featuredWorks = [
   {
     id: 1,
-    title: "GlobalFin Secure Portal",
-    category: "Custom Software",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-    description: "A proprietary Virtual Data Room (VDR) handling billions in secure transaction data with biometric authentication.",
-    tags: ["React", "Node.js", "AWS", "WebCrypto API"]
+    title: "UrbanEra Interiors",
+    category: "Interior Design",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200",
+    description: "End-to-end turnkey execution and bespoke design for residential and commercial spaces. Features include an animated hero CTA, process timeline, WhatsApp integration, and a portfolio gallery.",
+    tags: ["React", "Animations", "WhatsApp Integration", "Portfolio"],
+    link: "https://urbanera-new.vercel.app/"
   },
   {
     id: 2,
-    title: "Aura AI Support Agent",
-    category: "AI Integration",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
-    description: "An autonomous agentic system resolving 85% of tier-1 customer support tickets for a major e-commerce brand.",
-    tags: ["OpenAI", "Python", "FastAPI", "Vector Database"]
+    title: "Oceanus Advisory",
+    category: "Management Consulting",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
+    description: "A global advisory firm website utilizing a sophisticated dark purple aesthetic with glowing wave animations. Features include interactive service cards, statistics counter, and floating action buttons.",
+    tags: ["Corporate", "Animations", "Interactive UI", "Forms"],
+    link: "https://oceanus-new.vercel.app/"
   },
   {
     id: 3,
-    title: "Scale CRM Automation",
-    category: "Business Automation",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    description: "End-to-end n8n workflow optimizing internal data syncing across 5 different operational platforms.",
-    tags: ["n8n", "Playwright", "PostgreSQL", "Docker"]
+    title: "Design Alchemy",
+    category: "Interior & Architecture",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200",
+    description: "A dark, luxurious aesthetic for a Chennai-based interior studio. Deliverables include VR preview integration, 45-day delivery promise highlights, Instagram feeds, and consultation booking CTAs.",
+    tags: ["VR Integration", "Luxury Design", "Booking CTAs", "Instagram API"],
+    link: "https://www.designalchemy.net.in/"
   },
   {
     id: 4,
-    title: "Nexus Digital Platform",
-    category: "Web Design",
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1200",
-    description: "A bespoke, high-converting digital experience designed for a leading logistics firm, leveraging modern web frameworks.",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"]
-  },
-  {
-    id: 5,
-    title: "Echo Voice Booking Bot",
-    category: "AI Voice Agents",
-    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=1200",
-    description: "An automated telephony agent that handles 1,000+ daily inbound restaurant bookings with natural human inflection.",
-    tags: ["Twilio", "11Labs", "Node.js", "Redis"]
-  },
-  {
-    id: 6,
-    title: "Stratos Pitch Deck",
-    category: "Corporate Presentations",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200",
-    description: "A comprehensive B2B pitch deck and collateral suite that helped a SaaS startup secure $5M in Series A funding.",
-    tags: ["Figma", "Visual Storytelling", "Copywriting"]
+    title: "EPG Building Services",
+    category: "M&E Building Services",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1200",
+    description: "A B2B corporate website for a provider of premium Mechanical & Electrical building services across Singapore. Prominently displays industry certifications (BCA, bizSAFE, ISO) and includes an inquiry system.",
+    tags: ["B2B", "Corporate", "Certifications", "Inquiry System"],
+    link: "https://epgbspl.com/"
   }
+];
+
+const industryTemplates = [
+  { title: "Al Hak Perfumes", category: "Fragrance", description: "Dark, luxurious aesthetic tailored for a product showcase, complete with WhatsApp ordering integration." },
+  { title: "The Harsha Crafts & Gifts", category: "Gifting & Crafts", description: "Vibrant red theme highlighting a gift collections gallery and custom order forms." },
+  { title: "Saffron Thali", category: "Catering", description: "Elegant warm tones, designed to display menus and facilitate tasting session bookings." },
+  { title: "Vinlee", category: "Digital Marketing", description: "A dark, modern aesthetic built to showcase marketing services and performance metrics." },
+  { title: "Laya Alankara", category: "Jewelry", description: "Premium dark aesthetic with a curated jewelry collection gallery and WhatsApp ordering capabilities." },
+  { title: "Shasthava Real Estate", category: "Real Estate", description: "Modern blue palette focusing on property listings, location mapping, and inquiry forms." },
+  { title: "SR Luxury Cars", category: "Luxury Car Rental", description: "Elegant dark design highlighting a fleet gallery alongside floating contact buttons." },
+  { title: "TerraPrime Consulting", category: "Land Consulting", description: "Professional blue-orange palette to present service overviews and consultation forms." },
+  { title: "DJ Break & Play Arena", category: "Gaming Lounge", description: "Neon-themed dark aesthetic with vibrant pink and cyan accents, integrating booking functionalities." },
+  { title: "Bond By Bites", category: "Artisanal Bakery", description: "Premium brown-gold palette to showcase a signature collection alongside bespoke gifting forms." },
+  { title: "Auréa Salon", category: "Beauty & Salon", description: "Black and gold luxury design built to display service pricing and facilitate appointment bookings." },
+  { title: "Hyle Laban", category: "Desserts & F&B", description: "Fresh light blue design that accommodates full menu categories and customer reviews." },
+  { title: "Dr. Cloud Dentistry", category: "Healthcare", description: "Clean, timeless design equipped with a portfolio gallery and Google Reviews integration." },
+  { title: "South Spark Photography", category: "Photography", description: "Dark luxury aesthetic to present a service portfolio alongside appointment booking tools." },
+  { title: "Fifth Stitch", category: "Bespoke Menswear", description: "Refined dark aesthetic focused on a tailoring gallery and customer inquiry forms." },
+  { title: "Buzz Media Fame", category: "Digital Marketing", description: "Modern dark design featuring gold accents, designed to highlight service showcases and client metrics." }
 ];
 
 const PortfolioPage: React.FC = () => {
@@ -71,13 +74,18 @@ const PortfolioPage: React.FC = () => {
             Our <span className="text-indigo-600 dark:text-indigo-400">Portfolio</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Explore our curated showcase of digital transformations, AI integrations, and bespoke software solutions built for industry leaders.
+            Explore our curated showcase of live, fully responsive projects designed for real businesses, and our premium industry-specific templates.
           </p>
         </div>
 
-        {/* Portfolio Grid */}
-        <div className="grid lg:grid-cols-2 gap-12">
-          {allProjects.map((project, index) => (
+        {/* Featured Client Works */}
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Featured Client Works</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">Live projects optimized for conversions and measurable results.</p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 mb-32">
+          {featuredWorks.map((project, index) => (
             <div 
               key={project.id} 
               className={`group relative bg-white/50 dark:bg-[#111330]/50 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-[2.5rem] overflow-hidden hover:shadow-2xl transition-all duration-500 ${index % 2 !== 0 ? 'lg:translate-y-12' : ''}`}
@@ -93,12 +101,11 @@ const PortfolioPage: React.FC = () => {
                 
                 {/* Overlay Links */}
                 <div className="absolute top-6 right-6 z-20 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
-                  <button className="w-12 h-12 bg-white dark:bg-gray-900 rounded-full flex items-center justify-center text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors shadow-lg">
-                    <Github className="w-5 h-5" />
-                  </button>
-                  <button className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white hover:bg-indigo-700 transition-colors shadow-lg">
-                    <ExternalLink className="w-5 h-5" />
-                  </button>
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white hover:bg-indigo-700 transition-colors shadow-lg">
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -127,6 +134,28 @@ const PortfolioPage: React.FC = () => {
                   ))}
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Industry-Specific Templates */}
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">16+ Industry-Specific Templates</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-3xl">Premium, ready-to-deploy, mobile-responsive website templates designed for rapid deployment and lead generation across specific niches.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {industryTemplates.map((template, index) => (
+            <div key={index} className="bg-white dark:bg-[#111330] border border-gray-200 dark:border-white/10 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
+              <span className="inline-block px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs font-semibold rounded-full mb-4">
+                {template.category}
+              </span>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                {template.title}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                {template.description}
+              </p>
             </div>
           ))}
         </div>

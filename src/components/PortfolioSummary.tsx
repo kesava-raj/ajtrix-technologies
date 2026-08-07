@@ -5,24 +5,24 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: "GlobalFin Secure Portal",
-    category: "Custom Software",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    description: "A proprietary Virtual Data Room (VDR) handling billions in secure transaction data with biometric authentication.",
+    title: "UrbanEra Interiors",
+    category: "Interior Design",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800",
+    description: "End-to-end turnkey execution and bespoke design. Features an animated CTA, process timeline, and WhatsApp integration.",
   },
   {
     id: 2,
-    title: "Aura AI Support Agent",
-    category: "AI Integration",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
-    description: "An autonomous agentic system resolving 85% of tier-1 customer support tickets for a major e-commerce brand.",
+    title: "Oceanus Advisory",
+    category: "Management Consulting",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+    description: "A global advisory firm website utilizing a sophisticated dark purple aesthetic with glowing wave animations and interactive cards.",
   },
   {
     id: 3,
-    title: "Scale CRM Automation",
-    category: "Business Automation",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    description: "End-to-end n8n workflow optimizing internal data syncing across 5 different operational platforms.",
+    title: "Design Alchemy",
+    category: "Interior & Architecture",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800",
+    description: "A dark, luxurious aesthetic. Deliverables include VR preview integration, Instagram feeds, and consultation booking CTAs.",
   }
 ];
 

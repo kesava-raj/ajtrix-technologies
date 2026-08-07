@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { useContactModal } from '../context/ContactContext';
 import { ShinyButton } from './ui/shiny-button';
@@ -14,11 +15,11 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About Us', href: '#' },
-    { name: 'Services', href: '#' },
-    { name: 'Portfolio', href: '#' },
-    { name: 'Team', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/#about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Portfolio', href: '/#portfolio' },
+    { name: 'Team', href: '/#team' },
   ];
 
   return (
@@ -27,18 +28,18 @@ const Navbar: React.FC = () => {
         <div className="navbar-container">
           {/* Logo Placeholder */}
           <div className="navbar-logo">
-            <a href="#">
+            <Link to="/">
               <span className="logo-text">ajtrix</span>
               <span className="logo-asterisk">*</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation Pill */}
           <div className="navbar-links-desktop">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="nav-link">
+              <Link key={link.name} to={link.href} className="nav-link">
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -63,10 +64,10 @@ const Navbar: React.FC = () => {
       <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-header">
           <div className="navbar-logo">
-            <a href="#" onClick={toggleMenu}>
+            <Link to="/" onClick={toggleMenu}>
               <span className="logo-text">ajtrix</span>
               <span className="logo-asterisk">*</span>
-            </a>
+            </Link>
           </div>
           <button className="mobile-close-btn" onClick={toggleMenu} aria-label="Close menu">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -78,10 +79,10 @@ const Navbar: React.FC = () => {
         
         <div className="mobile-menu-links">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="mobile-nav-link" onClick={toggleMenu}>
+            <Link key={link.name} to={link.href} className="mobile-nav-link" onClick={toggleMenu}>
               {link.name}
               <span className="link-arrow">⌝</span>
-            </a>
+            </Link>
           ))}
         </div>
 

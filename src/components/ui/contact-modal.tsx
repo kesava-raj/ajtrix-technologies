@@ -37,86 +37,88 @@ const ContactModal: React.FC = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-md bg-white dark:bg-[#111111] rounded-2xl p-6 sm:p-8 shadow-2xl border border-gray-200 dark:border-gray-800 flex flex-col max-h-[90vh] overflow-y-auto"
+            className="relative w-full max-w-3xl bg-white dark:bg-[#09090b] rounded-[1.5rem] p-8 md:p-10 shadow-2xl border border-gray-200 dark:border-white/5 flex flex-col"
           >
             {/* Close Button */}
             <button 
               onClick={closeModal}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+              className="absolute top-6 right-6 text-gray-500 hover:text-gray-900 dark:text-zinc-500 dark:hover:text-white transition-colors"
               aria-label="Close modal"
             >
-              <X size={20} />
+              <X size={24} />
             </button>
 
             {/* Header */}
-            <div className="mb-6">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
+            <div className="mb-8 max-w-xl">
+              <h2 className="text-[32px] font-bold text-gray-900 dark:text-white mb-3 tracking-tight">
                 Contact Us
               </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-[16px] text-gray-600 dark:text-zinc-400 leading-relaxed">
                 Please reach out to us and we will get back to you at the speed of light.
               </p>
             </div>
 
             {/* Form */}
-            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); closeModal(); }}>
+            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); closeModal(); }}>
               
-              {/* Full Name */}
-              <div className="space-y-1.5">
-                <label htmlFor="name" className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Manu Arora"
-                  className="w-full px-3 py-2.5 bg-gray-50 dark:bg-[#1A1A1A] border border-gray-200 dark:border-gray-800 rounded-lg text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600"
-                />
-              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Full Name */}
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-[14px] font-medium text-gray-700 dark:text-zinc-300">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Manu Arora"
+                    className="w-full px-4 py-3 bg-gray-100 dark:bg-[#18181b] border-none rounded-xl text-gray-900 dark:text-white text-[14px] focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-white/20 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-500"
+                  />
+                </div>
 
-              {/* Email */}
-              <div className="space-y-1.5">
-                <label htmlFor="email" className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="hello@johndoe.com"
-                  className="w-full px-3 py-2.5 bg-gray-50 dark:bg-[#1A1A1A] border border-gray-200 dark:border-gray-800 rounded-lg text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600"
-                />
+                {/* Email */}
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-[14px] font-medium text-gray-700 dark:text-zinc-300">
+                    Email address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="hello@johndoe.com"
+                    className="w-full px-4 py-3 bg-gray-100 dark:bg-[#18181b] border-none rounded-xl text-gray-900 dark:text-white text-[14px] focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-white/20 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-500"
+                  />
+                </div>
               </div>
 
               {/* Company */}
-              <div className="space-y-1.5">
-                <label htmlFor="company" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              <div className="space-y-2">
+                <label htmlFor="company" className="text-[14px] font-medium text-gray-700 dark:text-zinc-300">
                   Company
                 </label>
                 <input
                   type="text"
                   id="company"
                   placeholder="Aceternity Labs, LLC"
-                  className="w-full px-3 py-2.5 bg-gray-50 dark:bg-[#1A1A1A] border border-gray-200 dark:border-gray-800 rounded-lg text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600"
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-[#18181b] border-none rounded-xl text-gray-900 dark:text-white text-[14px] focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-white/20 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-500"
                 />
               </div>
 
               {/* Message */}
-              <div className="space-y-1.5">
-                <label htmlFor="message" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-[14px] font-medium text-gray-700 dark:text-zinc-300">
                   message
                 </label>
                 <textarea
                   id="message"
                   rows={4}
                   placeholder="Enter your message here"
-                  className="w-full px-3 py-2.5 bg-gray-50 dark:bg-[#1A1A1A] border border-gray-200 dark:border-gray-800 rounded-lg text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600 resize-none"
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-[#18181b] border-none rounded-xl text-gray-900 dark:text-white text-[14px] focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-white/20 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-500 resize-none"
                 ></textarea>
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-3 mt-4 bg-gray-900 dark:bg-white text-white dark:text-black font-semibold rounded-lg text-sm hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-white dark:focus:ring-offset-[#111111]"
+                className="w-full py-3.5 mt-2 bg-gray-900 text-white dark:bg-white dark:text-black font-semibold rounded-full text-[15px] hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#09090b] focus:ring-gray-900 dark:focus:ring-white"
               >
                 Submit
               </button>
@@ -124,13 +126,13 @@ const ContactModal: React.FC = () => {
 
             {/* Social Icons Footer */}
             <div className="mt-8 flex justify-center space-x-6">
-              <a href="#" className="text-gray-400 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white transition-colors" aria-label="Twitter/X">
+              <a href="#" className="text-gray-400 hover:text-gray-900 dark:text-zinc-500 dark:hover:text-white transition-colors" aria-label="Twitter/X">
                 <Twitter />
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white transition-colors" aria-label="GitHub">
+              <a href="#" className="text-gray-400 hover:text-gray-900 dark:text-zinc-500 dark:hover:text-white transition-colors" aria-label="GitHub">
                 <Github />
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white transition-colors" aria-label="LinkedIn">
+              <a href="#" className="text-gray-400 hover:text-gray-900 dark:text-zinc-500 dark:hover:text-white transition-colors" aria-label="LinkedIn">
                 <Linkedin />
               </a>
             </div>

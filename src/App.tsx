@@ -17,9 +17,13 @@ import './App.css';
 
 const HomePage = () => (
   <>
-    {/* Hero Section Placeholder */}
-    <section className="hero-section" id="home">
-      {/* Empty for now, takes up 100vh so MoltenMetal shows through */}
+    {/* Hero Section */}
+    <section className="hero-section flex items-center justify-center pointer-events-none" id="home">
+      <div className="text-center space-y-6 z-10 px-6 max-w-4xl mx-auto pointer-events-auto">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white drop-shadow-lg leading-tight">
+          We design and develop high-converting websites that elevate brands across industries.
+        </h1>
+      </div>
     </section>
 
     {/* About Summary Section */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Lightbulb, ShieldCheck } from 'lucide-react';
+import { Target, Lightbulb } from 'lucide-react';
 
 const AboutSummary: React.FC = () => {
   return (
@@ -10,11 +10,11 @@ const AboutSummary: React.FC = () => {
           {/* Left Side: Content */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
-              Pioneering the Future of <br className="hidden md:block" />
-              <span className="text-indigo-600 dark:text-indigo-400">Digital Transformation</span>
+              What We Bring to <br className="hidden md:block" />
+              <span className="text-indigo-600 dark:text-indigo-400">the Table</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-              At Ajtrix Technologies, we believe in building technology that doesn't just solve today's problems, but anticipates tomorrow's challenges. From bespoke AI agents to comprehensive enterprise software, we are your partners in scaling innovation.
+              A curated selection of our work across 16+ industries, designed to convert.
             </p>
             
             <div className="space-y-6 mb-10">
@@ -23,8 +23,8 @@ const AboutSummary: React.FC = () => {
                   <Target className="w-6 h-6 text-indigo-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Our Mission</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Empowering businesses with intelligent automation and scalable software solutions that drive measurable growth.</p>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Featured Client Works</h3>
+                  <p className="text-gray-600 dark:text-gray-400">Live projects delivered for real businesses, optimized for conversions.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -32,8 +32,8 @@ const AboutSummary: React.FC = () => {
                   <Lightbulb className="w-6 h-6 text-indigo-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Innovation First</h3>
-                  <p className="text-gray-600 dark:text-gray-400">We leverage the latest in AI, Playwright automation, and modern web frameworks to keep you ahead of the curve.</p>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Industry Templates</h3>
+                  <p className="text-gray-600 dark:text-gray-400">16 premium designs spanning multiple verticals, ready to deploy.</p>
                 </div>
               </div>
             </div>
@@ -53,23 +53,22 @@ const AboutSummary: React.FC = () => {
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-6">
                   <div className="bg-gray-100 dark:bg-white/5 rounded-2xl p-6 border border-gray-200 dark:border-white/10">
-                    <ShieldCheck className="w-10 h-10 text-indigo-500 mb-4" />
-                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">100%</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Secure & Compliant</p>
+                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">20+</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Projects Delivered</p>
                   </div>
                   <div className="bg-indigo-500 text-white rounded-2xl p-6 shadow-lg shadow-indigo-500/30">
-                    <h4 className="text-3xl font-bold mb-2">24/7</h4>
-                    <p className="text-sm text-indigo-100">Automated Operations</p>
+                    <h4 className="text-3xl font-bold mb-2">16+</h4>
+                    <p className="text-sm text-indigo-100">Industry Niches</p>
                   </div>
                 </div>
                 <div className="space-y-6 pt-12">
                   <div className="bg-white dark:bg-white/10 rounded-2xl p-6 border border-gray-200 dark:border-white/10 shadow-xl">
-                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">50+</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Enterprise Clients</p>
+                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">3+</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
                   </div>
                   <div className="bg-gray-100 dark:bg-white/5 rounded-2xl p-6 border border-gray-200 dark:border-white/10">
-                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">16+</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Industry Templates</p>
+                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">4+</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Countries Served</p>
                   </div>
                 </div>
               </div>

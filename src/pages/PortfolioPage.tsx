@@ -7,8 +7,8 @@ const featuredWorks = [
     title: "UrbanEra Interiors",
     category: "Interior Design",
     image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200",
-    description: "End-to-end turnkey execution and bespoke design for residential and commercial spaces. Features include an animated hero CTA, process timeline, WhatsApp integration, and a portfolio gallery.",
-    tags: ["React", "Animations", "WhatsApp Integration", "Portfolio"],
+    description: "Beyond Interiors, We Design Experiences. We create inspiring spaces that reflect your lifestyle, elevate your everyday, and stand the test of time. UrbanEra Interiors is an interior design company providing end-to-end turnkey execution and bespoke design solutions for residential and commercial spaces. We built a modern, elegant website that reflects their premium positioning with structured layouts, high-quality project imagery, and smooth user interactions.",
+    tags: ["Hero section with animated CTA", "Work cycle / process timeline", "WhatsApp integration", "Portfolio gallery showcase", "Client testimonials section", "Fully responsive design"],
     link: "https://urbanera-new.vercel.app/"
   },
   {
@@ -16,17 +16,17 @@ const featuredWorks = [
     title: "Oceanus Advisory",
     category: "Management Consulting",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
-    description: "A global advisory firm website utilizing a sophisticated dark purple aesthetic with glowing wave animations. Features include interactive service cards, statistics counter, and floating action buttons.",
-    tags: ["Corporate", "Animations", "Interactive UI", "Forms"],
+    description: "Bridging Investors, Businesses, and Governments to Create Sustainable Global Growth. A global advisory and management consulting firm specializing in strategic advisory, investment facilitation, infrastructure development, commodity trade, and public affairs—with presence across India, the Middle East, Africa, and international markets. Oceanus Advisory is a global advisory and management consulting firm specializing in strategic advisory, investment facilitation, and infrastructure development across India, the Middle East, Africa, and international markets. We designed a sophisticated website with dark purple aesthetics, glowing wave animations, and interactive elements.",
+    tags: ["Animated hero with wave effects", "Interactive service cards", "Contact form integration", "Client logos carousel", "Statistics counter display", "Floating action buttons"],
     link: "https://oceanus-new.vercel.app/"
   },
   {
     id: 3,
     title: "Design Alchemy",
-    category: "Interior & Architecture",
+    category: "Interior Design & Architecture",
     image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200",
-    description: "A dark, luxurious aesthetic for a Chennai-based interior studio. Deliverables include VR preview integration, 45-day delivery promise highlights, Instagram feeds, and consultation booking CTAs.",
-    tags: ["VR Integration", "Luxury Design", "Booking CTAs", "Instagram API"],
+    description: "Chennai's Finest Interior Design Studio. Cohesive, luxurious living environments crafted in Chennai. 45-day delivery. 10-year warranty. Every space a work of art. Design Alchemy is a Chennai-based interior design studio specializing in bespoke interiors and architecture. We created a dark, luxurious website with elegant typography and high-quality imagery that communicates their premium positioning. Features VR preview integration, 45-day delivery promises, and Instagram feed integration.",
+    tags: ["Dark luxury aesthetic design", "Instagram feed integration", "Consultation booking CTA", "Portfolio gallery with categories", "Client testimonials & FAQ", "Mobile-first responsive"],
     link: "https://www.designalchemy.net.in/"
   },
   {
@@ -34,29 +34,29 @@ const featuredWorks = [
     title: "EPG Building Services",
     category: "M&E Building Services",
     image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1200",
-    description: "A B2B corporate website for a provider of premium Mechanical & Electrical building services across Singapore. Prominently displays industry certifications (BCA, bizSAFE, ISO) and includes an inquiry system.",
-    tags: ["B2B", "Corporate", "Certifications", "Inquiry System"],
+    description: "Building Excellence into Every Structure. EPG Building Services Pte Ltd delivers premium Mechanical & Electrical building services across Singapore—from prestigious condominiums to landmark commercial projects. EPG Building Services provides premium Mechanical & Electrical building services across Singapore. We developed a professional corporate website showcasing their certifications (BCA, bizSAFE, ISO), project references, and organizational structure for a B2B audience in the construction industry.",
+    tags: ["Corporate professional layout", "Certifications display", "Service categories", "Project references showcase", "Organization chart", "Contact & inquiry system"],
     link: "https://epgbspl.com/"
   }
 ];
 
 const industryTemplates = [
-  { title: "Al Hak Perfumes", category: "Fragrance", description: "Dark, luxurious aesthetic tailored for a product showcase, complete with WhatsApp ordering integration." },
-  { title: "The Harsha Crafts & Gifts", category: "Gifting & Crafts", description: "Vibrant red theme highlighting a gift collections gallery and custom order forms." },
-  { title: "Saffron Thali", category: "Catering", description: "Elegant warm tones, designed to display menus and facilitate tasting session bookings." },
-  { title: "Vinlee", category: "Digital Marketing", description: "A dark, modern aesthetic built to showcase marketing services and performance metrics." },
-  { title: "Laya Alankara", category: "Jewelry", description: "Premium dark aesthetic with a curated jewelry collection gallery and WhatsApp ordering capabilities." },
-  { title: "Shasthava Real Estate", category: "Real Estate", description: "Modern blue palette focusing on property listings, location mapping, and inquiry forms." },
-  { title: "SR Luxury Cars", category: "Luxury Car Rental", description: "Elegant dark design highlighting a fleet gallery alongside floating contact buttons." },
-  { title: "TerraPrime Consulting", category: "Land Consulting", description: "Professional blue-orange palette to present service overviews and consultation forms." },
-  { title: "DJ Break & Play Arena", category: "Gaming Lounge", description: "Neon-themed dark aesthetic with vibrant pink and cyan accents, integrating booking functionalities." },
-  { title: "Bond By Bites", category: "Artisanal Bakery", description: "Premium brown-gold palette to showcase a signature collection alongside bespoke gifting forms." },
-  { title: "Auréa Salon", category: "Beauty & Salon", description: "Black and gold luxury design built to display service pricing and facilitate appointment bookings." },
-  { title: "Hyle Laban", category: "Desserts & F&B", description: "Fresh light blue design that accommodates full menu categories and customer reviews." },
-  { title: "Dr. Cloud Dentistry", category: "Healthcare", description: "Clean, timeless design equipped with a portfolio gallery and Google Reviews integration." },
-  { title: "South Spark Photography", category: "Photography", description: "Dark luxury aesthetic to present a service portfolio alongside appointment booking tools." },
-  { title: "Fifth Stitch", category: "Bespoke Menswear", description: "Refined dark aesthetic focused on a tailoring gallery and customer inquiry forms." },
-  { title: "Buzz Media Fame", category: "Digital Marketing", description: "Modern dark design featuring gold accents, designed to highlight service showcases and client metrics." }
+  { title: "Al Hak Perfumes", category: "Fragrance", description: "Any perfume. Any brand. Cloned, your price. Dark, luxurious aesthetic with product showcase and WhatsApp ordering..." },
+  { title: "The Harsha Crafts & Gifts", category: "Gifting & Crafts", description: "Gifts from the Heart. Vibrant red theme with gift collections gallery and custom order fo..." },
+  { title: "Saffron Thali", category: "Catering", description: "Weddings, served with soul. Elegant warm tones with menu showcase and tasting session booking." },
+  { title: "Vinlee", category: "Digital Marketing", description: "Marketing that converts. Dark modern aesthetic with service showcase and performance metrics." },
+  { title: "Laya Alankara", category: "Jewelry", description: "Handcrafted Heirlooms, Worn Today. Premium dark aesthetic with curated collection and gallery WhatsApp..." },
+  { title: "Shasthava Real Estate", category: "Real Estate", description: "Discover Your Dream Home. Modern blue palette with property listings, inquiry forms, and loca..." },
+  { title: "SR Luxury Cars", category: "Luxury Car Rental", description: "Arrive in elegance. Dark elegant design with fleet gallery and floating contact buttons." },
+  { title: "TerraPrime Consulting", category: "Land Consulting", description: "Buy land. Without the worry. Professional blue-orange palette with service and overview consulta..." },
+  { title: "DJ Break & Play Arena", category: "Gaming Lounge", description: "PLAY HARD CHILL HARDER. Neon-themed dark aesthetic with vibrant pink/cyan accents and booki..." },
+  { title: "Bond By Bites", category: "Artisanal Bakery", description: "Where Every Bite Creates a Bond. Premium brown-gold palette with signature and collection bespoke gi..." },
+  { title: "Auréa Salon", category: "Beauty & Salon", description: "Your Hair, Your Statement. Black and gold luxury design with service pricing and appointment b..." },
+  { title: "Hyle Laban", category: "Desserts & F&B", description: "Authentic Middle Eastern Desserts. Fresh light blue design with full menu categories and customer revi..." },
+  { title: "Dr. Cloud Dentistry", category: "Healthcare", description: "Dr. Cloud Dentistry. Clean timeless design with portfolio gallery and Google Reviews int..." },
+  { title: "South Spark Photography", category: "Photography", description: "Stories, timelessly told. Dark luxury aesthetic with appointment booking and service portfolio." },
+  { title: "Fifth Stitch", category: "Bespoke Menswear", description: "Tailored for the groom. Refined dark aesthetic with tailoring gallery and inquiry forms." },
+  { title: "Buzz Media Fame", category: "Digital Marketing", description: "Make Your Brand Go Viral. Modern dark design with gold accents, service and showcase, client..." }
 ];
 
 const PortfolioPage: React.FC = () => {
@@ -163,13 +163,13 @@ const PortfolioPage: React.FC = () => {
         <div className="mt-40 text-center bg-indigo-600 dark:bg-indigo-900/40 rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
           <h2 className="relative z-10 text-3xl md:text-5xl font-bold text-white mb-6">
-            Ready to build something extraordinary?
+            Ready to Transform Your Digital Presence?
           </h2>
           <p className="relative z-10 text-indigo-100 text-lg mb-10 max-w-2xl mx-auto">
-            Let's discuss how our custom software and AI solutions can transform your operational efficiency.
+            Whether you need a custom website built from scratch or want to launch quickly with one of our industry templates, we're here to make it happen.
           </p>
           <button className="relative z-10 px-8 py-4 bg-white text-indigo-600 font-bold rounded-full hover:bg-gray-50 transition-colors shadow-xl">
-            Start Your Project
+            Let's Start a Conversation
           </button>
         </div>
 

@@ -17,17 +17,17 @@ const Footer: React.FC = () => {
             </a>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Ready to bring your <br className="hidden md:block"/> ideas to life?
+            Ready to Transform Your <br className="hidden md:block"/> Digital Presence?
           </h2>
-          <p className="text-gray-400 max-w-md mx-auto md:mx-0">
-            Let's collaborate to build something extraordinary. Our team is ready to tackle your next big challenge.
+          <p className="text-gray-400 max-w-md mx-auto md:mx-0 leading-relaxed">
+            Whether you need a custom website built from scratch or want to launch quickly with one of our industry templates, we're here to make it happen.
           </p>
         </div>
 
         {/* Right Side: The Shiny Button CTA */}
         <div className="flex-shrink-0">
           <ShinyButton onClick={openModal} className="py-4 px-8 text-lg shadow-2xl">
-            Start a Project Today
+            Let's Start a Conversation
           </ShinyButton>
         </div>
       </div>

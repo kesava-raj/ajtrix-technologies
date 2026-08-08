@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   const { openModal } = useContactModal();
 
   return (
-    <footer className="bg-[#0f1136] text-white py-20 px-8 relative z-10" id="contact">
+    <footer className="bg-[#0f1136] text-white py-12 md:py-16 px-8 relative z-10" id="contact">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         
         {/* Left Side: Brand and CTA */}
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
       </div>
       
       {/* Middle Grid: Links and Contact */}
-      <div className="max-w-5xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-12 text-sm text-left">
+      <div className="max-w-5xl mx-auto mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-left">
         {/* Location & Contact */}
         <div className="space-y-4">
           <h4 className="text-lg font-semibold text-white">Location & Contact</h4>
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="max-w-5xl mx-auto mt-20 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-500">
+      <div className="max-w-5xl mx-auto mt-12 md:mt-16 pt-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-500">
         <p>© {new Date().getFullYear()} Ajtrix Technologies. All rights reserved.</p>
         
         <div className="flex items-center space-x-6">

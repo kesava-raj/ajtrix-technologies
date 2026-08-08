@@ -28,7 +28,7 @@ const projects = [
 
 const PortfolioSummary: React.FC = () => {
   return (
-    <section className="py-24 px-6 md:px-12 relative z-10 bg-gray-50/50 dark:bg-[#050512]/50 border-y border-gray-200 dark:border-white/5" id="portfolio-summary">
+    <section className="py-24 px-6 md:px-12 relative z-10" id="portfolio-summary">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">

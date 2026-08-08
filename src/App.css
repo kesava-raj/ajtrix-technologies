@@ -30,7 +30,7 @@
 
 .team-section {
   padding: 100px 20px;
-  background: var(--bg-color); /* Creates a solid background block below the hero to match the image exactly */
+  background: transparent;
   position: relative;
   z-index: 10;
 }

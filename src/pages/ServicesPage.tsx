@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Monitor, Cpu, Workflow, LayoutTemplate, Mic, Share2, Presentation, CheckCircle2 } from 'lucide-react';
+import BorderBeamPanel from '../components/ui/border-beam-panel';
 
 const detailedServices = [
   {
@@ -96,12 +97,12 @@ const ServicesPage: React.FC = () => {
 
               {/* Visual Side - Glassmorphism Card */}
               <div className="w-full lg:w-1/2">
-                <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[2rem] bg-gradient-to-tr from-indigo-500/10 via-transparent to-purple-500/10 dark:from-indigo-500/20 dark:to-purple-500/20 border border-gray-200 dark:border-white/10 backdrop-blur-3xl overflow-hidden shadow-2xl flex items-center justify-center p-12">
+                <BorderBeamPanel radius={32} className="!p-0 relative w-full aspect-square md:aspect-[4/3] rounded-[2rem] bg-gradient-to-tr from-indigo-500/10 via-transparent to-purple-500/10 dark:from-indigo-500/20 dark:to-purple-500/20 border-0 overflow-hidden shadow-2xl flex items-center justify-center">
                   <div className="absolute inset-0 bg-white/40 dark:bg-black/20" />
                   <div className="relative z-10 w-48 h-48 bg-white dark:bg-[#111330] rounded-full shadow-2xl flex items-center justify-center animate-pulse duration-3000 border border-gray-100 dark:border-white/5">
                      {service.icon}
                   </div>
-                </div>
+                </BorderBeamPanel>
               </div>
             </div>
           ))}

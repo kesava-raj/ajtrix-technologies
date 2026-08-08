@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Lightbulb } from 'lucide-react';
+import BorderBeamPanel from './ui/border-beam-panel';
 
 const AboutSummary: React.FC = () => {
   return (
@@ -52,24 +53,24 @@ const AboutSummary: React.FC = () => {
             <div className="relative bg-white/50 dark:bg-[#111330]/50 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 md:p-12 shadow-2xl">
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-6">
-                  <div className="bg-gray-100 dark:bg-white/5 rounded-2xl p-6 border border-gray-200 dark:border-white/10">
+                  <BorderBeamPanel radius={16} className="p-6">
                     <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">20+</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Projects Delivered</p>
-                  </div>
-                  <div className="bg-indigo-500 text-white rounded-2xl p-6 shadow-lg shadow-indigo-500/30">
-                    <h4 className="text-3xl font-bold mb-2">16+</h4>
-                    <p className="text-sm text-indigo-100">Industry Niches</p>
-                  </div>
+                  </BorderBeamPanel>
+                  <BorderBeamPanel radius={16} className="p-6">
+                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">16+</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Industry Niches</p>
+                  </BorderBeamPanel>
                 </div>
                 <div className="space-y-6 pt-12">
-                  <div className="bg-white dark:bg-white/10 rounded-2xl p-6 border border-gray-200 dark:border-white/10 shadow-xl">
+                  <BorderBeamPanel radius={16} className="p-6">
                     <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">3+</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
-                  </div>
-                  <div className="bg-gray-100 dark:bg-white/5 rounded-2xl p-6 border border-gray-200 dark:border-white/10">
+                  </BorderBeamPanel>
+                  <BorderBeamPanel radius={16} className="p-6">
                     <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">4+</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Countries Served</p>
-                  </div>
+                  </BorderBeamPanel>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MoltenMetal from './components/MoltenMetal';
+import HeroSection from './components/HeroSection';
 import Navbar from './components/Navbar';
 import TeamSection from './components/TeamSection';
 import Footer from './components/Footer';
@@ -10,6 +11,8 @@ import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import TeamPage from './pages/TeamPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsPage from './pages/TermsPage';
 import { useTheme } from './context/ThemeContext';
 import { ContactModalProvider } from './context/ContactContext';
 import ContactModal from './components/ui/contact-modal';
@@ -18,13 +21,7 @@ import './App.css';
 const HomePage = () => (
   <>
     {/* Hero Section */}
-    <section className="hero-section flex items-center justify-center pointer-events-none" id="home">
-      <div className="text-center space-y-6 z-10 px-6 max-w-4xl mx-auto pointer-events-auto">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white drop-shadow-lg leading-tight">
-          We design and develop high-converting websites that elevate brands across industries.
-        </h1>
-      </div>
-    </section>
+    <HeroSection />
 
     {/* About Summary Section */}
     <AboutSummary />
@@ -65,6 +62,8 @@ function App() {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/portfolio" element={<PortfolioPage />} />
                 <Route path="/team" element={<TeamPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                <Route path="/terms-of-service" element={<TermsPage />} />
               </Routes>
             </main>
 

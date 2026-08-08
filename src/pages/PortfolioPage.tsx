@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
+import BorderBeamPanel from '../components/ui/border-beam-panel';
 
 const featuredWorks = [
   {
@@ -145,7 +146,7 @@ const PortfolioPage: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {industryTemplates.map((template, index) => (
-            <div key={index} className="bg-white dark:bg-[#111330] border border-gray-200 dark:border-white/10 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
+            <BorderBeamPanel key={index} radius={16} className="p-6">
               <span className="inline-block px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs font-semibold rounded-full mb-4">
                 {template.category}
               </span>
@@ -155,7 +156,7 @@ const PortfolioPage: React.FC = () => {
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 {template.description}
               </p>
-            </div>
+            </BorderBeamPanel>
           ))}
         </div>
 

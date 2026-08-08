@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Shield, Target, Zap, Users, Globe2, Code2 } from 'lucide-react';
+import HowItWorks from '../components/ui/how-it-works';
+import BorderBeamPanel from '../components/ui/border-beam-panel';
 
 const advantages = [
   {
@@ -31,34 +33,6 @@ const advantages = [
     icon: <Users className="w-6 h-6 text-indigo-500" />,
     title: "06. End-to-End Service",
     description: "From design concept to deployment and beyond - hosting, domain setup, SEO basics, and ongoing support included."
-  }
-];
-
-const workflowSteps = [
-  {
-    number: "1",
-    title: "Discovery & Strategy",
-    description: "We understand your business, target audience, and goals. Research your industry and competitors to craft the perfect digital strategy."
-  },
-  {
-    number: "2",
-    title: "Design & Prototyping",
-    description: "We select or create the ideal design direction for your brand. You see mockups and provide feedback before any code is written."
-  },
-  {
-    number: "3",
-    title: "Development & Integration",
-    description: "We build your website with clean code, integrate essential tools (WhatsApp, forms, analytics), and ensure flawless performance."
-  },
-  {
-    number: "4",
-    title: "Testing & Launch",
-    description: "Rigorous testing across devices and browsers. We handle deployment, domain configuration, and ensure everything is production-ready."
-  },
-  {
-    number: "5",
-    title: "Support & Growth",
-    description: "Post-launch support, performance monitoring, and iterative improvements to keep your website converting at its best."
   }
 ];
 
@@ -140,19 +114,19 @@ const AboutPage: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {advantages.map((adv, idx) => (
-              <div key={idx} className="bg-white/50 dark:bg-[#111330]/50 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+              <BorderBeamPanel key={idx} radius={16} className="p-8 hover:-translate-y-1 transition-transform duration-300">
                 <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center mb-6 shadow-sm">
                   {adv.icon}
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{adv.title}</h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{adv.description}</p>
-              </div>
+              </BorderBeamPanel>
             ))}
           </div>
         </div>
 
         {/* Workflow */}
-        <div>
+        <div className="mt-16">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
               Our <span className="text-indigo-600 dark:text-indigo-400">Workflow</span>
@@ -161,24 +135,7 @@ const AboutPage: React.FC = () => {
               A streamlined 5-step process designed to deliver results efficiently.
             </p>
           </div>
-          <div className="max-w-4xl mx-auto relative">
-            {/* Connecting line */}
-            <div className="hidden md:block absolute left-8 top-10 bottom-10 w-0.5 bg-gradient-to-b from-indigo-500/50 to-purple-500/50" />
-            
-            <div className="space-y-12">
-              {workflowSteps.map((step, idx) => (
-                <div key={idx} className="relative flex flex-col md:flex-row gap-8 items-start">
-                  <div className="flex-shrink-0 relative z-10 w-16 h-16 rounded-full bg-indigo-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg shadow-indigo-500/30">
-                    {step.number}
-                  </div>
-                  <div className="bg-white/50 dark:bg-[#111330]/50 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 flex-grow hover:border-indigo-500/50 transition-colors duration-300">
-                    <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">{step.title}</h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <HowItWorks />
         </div>
 
       </div>

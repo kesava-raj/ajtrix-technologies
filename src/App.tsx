@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MoltenMetal from './components/MoltenMetal';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/Navbar';
+import TestimonialSection from './components/TestimonialSection';
 import TeamSection from './components/TeamSection';
 import Footer from './components/Footer';
 import AboutSummary from './components/AboutSummary';
@@ -31,6 +32,9 @@ const HomePage = () => (
 
     {/* Portfolio Summary Section */}
     <PortfolioSummary />
+
+    {/* Testimonials */}
+    <TestimonialSection />
 
     {/* Team Section */}
     <TeamSection />

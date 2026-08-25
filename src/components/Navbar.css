@@ -11,8 +11,12 @@
   box-sizing: border-box;
   font-family: var(--sans, system-ui, sans-serif);
   
-  /* We will use absolute layered divs for the gradient blur */
+  /* Adding backdrop blur to the navbar */
   background: transparent;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
 /* Gradient Blur Layers for smooth blend */

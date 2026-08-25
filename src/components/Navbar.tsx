@@ -25,16 +25,6 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav className="navbar">
-        {/* Gradient Blur Layers */}
-        <div className="gradient-blur h-32 md:h-40">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-
         <div className="navbar-container relative z-10">
           {/* Logo */}
           <div className="navbar-logo">

@@ -1,120 +1,228 @@
-import { Star, Heart } from 'lucide-react';
+import { useState } from 'react';
+import { Star, Heart, X } from 'lucide-react';
 
-const testimonials = [
+interface Testimonial {
+  name: string;
+  subtitle: string;
+  quote: string;
+  rankText: string;
+  avatarUrl: string;
+  caseStudy: {
+    title: string;
+    challenge: string;
+    solution: string;
+    results: string;
+  };
+}
+
+const testimonials: Testimonial[] = [
   {
-    name: "Dr. James Bazzi",
-    subtitle: "SKIN MD Medspa",
-    quote: '"Solora ranked us #1 with more bookings."',
-    rankText: '#1 Ranked for "Medspa Dearborn"',
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+    name: "Diwakar",
+    subtitle: "Design alchemy, Interior Designer, Chennai",
+    quote: '"They built our studio website in just a week. Within the first month, we had 13 new project inquiries from the website alone."',
+    rankText: "Website Design",
+    avatarUrl: "https://ui-avatars.com/api/?name=Diwakar&background=random",
+    caseStudy: {
+      title: "Accelerating Growth for a Chennai Design Studio",
+      challenge: "The interior design studio lacked a digital presence to showcase their portfolio, relying entirely on word-of-mouth which limited their growth potential.",
+      solution: "We rapidly developed a visually stunning, high-performance studio website within a single week, optimized for SEO and client acquisition.",
+      results: "Within the first month post-launch, the new website successfully generated 13 new high-value project inquiries organically."
+    }
   },
   {
-    name: "Vivian Bousi",
-    subtitle: "Skin Care Specialist",
-    quote: '"Solora got us 270 5-Star Google Reviews!"',
-    rankText: '#1 Ranked for "Facial Dearborn"',
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+    name: "Logeshwaran",
+    subtitle: "EPG Building services, Singapore",
+    quote: '"Clean, minimal design that speaks volumes about the brand. With both light and dark themes"',
+    rankText: "Brand Identity & Web Development",
+    avatarUrl: "https://ui-avatars.com/api/?name=Logeshwaran&background=random",
+    caseStudy: {
+      title: "Crafting a Minimalist Brand Experience with Dual Themes",
+      challenge: "EPG Building Services needed a modern web presence that accurately reflected their clean, professional brand identity to a global audience in Singapore.",
+      solution: "We designed a minimalist, highly responsive website featuring a custom toggleable light and dark mode to enhance user experience.",
+      results: "The clean design successfully elevated their brand perception, providing a seamless browsing experience that speaks volumes to their prospective clients."
+    }
   },
   {
-    name: "Dr. Rula Al-Aouar",
-    subtitle: "OB/GYN",
-    quote: '"Solora re-booked over 40 patients for us!"',
-    rankText: "OB/GYN",
-    avatarUrl: "https://i.pravatar.cc/150?u=a04258114e29026702d",
+    name: "Sai Nandhini",
+    subtitle: "SSVSP Trust, Bangalore",
+    quote: '"We needed a CRM tool built for our school and they built it along with post deployment support and assistance."',
+    rankText: "Custom CRM Development",
+    avatarUrl: "https://ui-avatars.com/api/?name=Sai+Nandhini&background=random",
+    caseStudy: {
+      title: "Building a Custom CRM Solution for Educational Management",
+      challenge: "SSVSP Trust in Bangalore was struggling with managing school operations and student data using disjointed manual processes.",
+      solution: "We engineered a bespoke CRM tool specifically tailored to their school's workflow, ensuring secure data handling and streamlined administration.",
+      results: "The custom CRM successfully centralized their operations. We also provided continuous post-deployment support to ensure seamless adoption by their staff."
+    }
   },
   {
-    name: "Dr. Raychouni",
-    subtitle: "MiSpine Chiropractic",
-    quote: '"Solora brought in patients we haven\'t seen in years."',
-    rankText: '#1 Ranked for "Chiropractor Dearborn Heights"',
-    avatarUrl: "https://i.pravatar.cc/150?u=a048581f4e29026701d",
+    name: "Keerthiswaran",
+    subtitle: "Olympia Physio, Coimbatore",
+    quote: '"The team is incredibly responsive and built our website within the deadline."',
+    rankText: "Web Development",
+    avatarUrl: "https://ui-avatars.com/api/?name=Keerthiswaran&background=random",
+    caseStudy: {
+      title: "Delivering a Professional Healthcare Website on a Strict Deadline",
+      challenge: "Olympia Physio needed an immediate online presence to start accepting appointments but had a very tight turnaround time.",
+      solution: "Our highly responsive team worked efficiently to design, build, and deploy a fully functional clinic website without compromising quality.",
+      results: "The project was delivered flawlessly within the strict deadline, enabling the clinic to immediately start serving patients online."
+    }
   },
   {
-    name: "Rasha Dakroub",
-    subtitle: "Peek A Boutique",
-    quote: '"Solora helped us get 40 ultrasound bookings."',
-    rankText: '#1 Ranked for "Ultrasound Ann Arbor/Dearborn"',
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026704c",
-  },
-  {
-    name: "Linda",
-    subtitle: "Northville Beauty Spa",
-    quote: '"Solora got us 36 Botox patients in our first month"',
-    rankText: '#1 Ranked for "Botox Northville"',
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026704b",
-  },
+    name: "Ram Kumar",
+    subtitle: "RK Neuro biology and laboratory, Nagapattinam",
+    quote: '"We went from zero online presence to a fully functional website in under a week. The website has a custom admin portal that reduces time in storing client details easily"',
+    rankText: "Web Design & Custom Admin Portal",
+    avatarUrl: "https://ui-avatars.com/api/?name=Ram+Kumar&background=random",
+    caseStudy: {
+      title: "From Zero Online Presence to a Custom Admin Portal in a Week",
+      challenge: "RK Neuro biology and laboratory in Nagapattinam had no digital footprint and relied on time-consuming manual entry for storing client details.",
+      solution: "In under a week, we launched a fully functional website integrated with a bespoke secure admin portal designed specifically for patient data management.",
+      results: "The new system drastically reduced the time spent on administrative tasks, allowing the laboratory to store and access client details with unprecedented ease."
+    }
+  }
 ];
 
 const TestimonialSection = () => {
-  return (
-    <section className="py-20 bg-transparent relative z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Header */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-1 mb-6">
-            <Heart className="w-4 h-4 text-purple-500 fill-purple-500" />
-            <span className="text-sm font-medium text-gray-800 dark:text-gray-200">Testimonials</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Our Client's Feedback
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            See how Solora is helping practices grow
-          </p>
-        </div>
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState<Testimonial | null>(null);
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
-            >
-              {/* Profile Header */}
-              <div className="flex items-center gap-4 mb-4">
+  return (
+    <>
+      <section className="py-20 bg-transparent relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Header */}
+          <div className="flex flex-col items-center text-center mb-16">
+            <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-1 mb-6">
+              <Heart className="w-4 h-4 text-purple-500 fill-purple-500" />
+              <span className="text-sm font-medium text-gray-800 dark:text-gray-200">Testimonials & Case Studies</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Our Client's Feedback
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              See how ajtrix is helping businesses scale and automate
+            </p>
+          </div>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={index}
+                className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
+              >
+                {/* Profile Header */}
+                <div className="flex items-center gap-4 mb-4">
+                  <img 
+                    src={testimonial.avatarUrl} 
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white text-sm">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                      {testimonial.subtitle}
+                    </p>
+                    <div className="flex items-center mt-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quote */}
+                <div className="flex-grow">
+                  <p className="text-xl font-medium text-gray-900 dark:text-white mb-3 leading-snug">
+                    {testimonial.quote}
+                  </p>
+                  <p className="text-sm font-medium text-purple-600 dark:text-purple-400 mb-6">
+                    {testimonial.rankText}
+                  </p>
+                </div>
+
+                {/* Footer Button */}
+                <div className="mt-auto">
+                  <button 
+                    onClick={() => setSelectedCaseStudy(testimonial)}
+                    className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-xs font-semibold rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  >
+                    Read Case Study
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Modal */}
+      {selectedCaseStudy && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/50 backdrop-blur-sm transition-opacity">
+          <div 
+            className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="px-6 py-4 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">Case Study</h3>
+              <button 
+                onClick={() => setSelectedCaseStudy(null)}
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 sm:p-8 max-h-[80vh] overflow-y-auto">
+              <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-100 dark:border-gray-800">
                 <img 
-                  src={testimonial.avatarUrl} 
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
+                  src={selectedCaseStudy.avatarUrl} 
+                  alt={selectedCaseStudy.name}
+                  className="w-16 h-16 rounded-full object-cover shadow-sm"
                 />
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white text-sm">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">
-                    {testimonial.subtitle}
-                  </p>
-                  <div className="flex items-center mt-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 text-yellow-400 fill-yellow-400" />
-                    ))}
-                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white">{selectedCaseStudy.name}</h4>
+                  <p className="text-gray-500 dark:text-gray-400">{selectedCaseStudy.subtitle}</p>
                 </div>
               </div>
 
-              {/* Quote */}
-              <div className="flex-grow">
-                <p className="text-xl font-medium text-gray-900 dark:text-white mb-3 leading-snug">
-                  {testimonial.quote}
-                </p>
-                <p className="text-sm font-medium text-purple-600 dark:text-purple-400 mb-6">
-                  {testimonial.rankText}
-                </p>
-              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+                {selectedCaseStudy.caseStudy.title}
+              </h2>
 
-              {/* Footer Button */}
-              <div className="mt-auto">
-                <button className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-xs font-semibold rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                  Case Study
-                </button>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-sm font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider mb-2">The Challenge</h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {selectedCaseStudy.caseStudy.challenge}
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider mb-2">Our Solution</h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {selectedCaseStudy.caseStudy.solution}
+                  </p>
+                </div>
+
+                <div className="bg-purple-50 dark:bg-purple-900/20 rounded-2xl p-6 mt-8">
+                  <h3 className="text-sm font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider mb-2">The Results</h3>
+                  <p className="text-gray-800 dark:text-gray-200 font-medium leading-relaxed">
+                    {selectedCaseStudy.caseStudy.results}
+                  </p>
+                </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </section>
+      )}
+    </>
   );
 };
 

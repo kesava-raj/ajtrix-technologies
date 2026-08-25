@@ -1,5 +1,4 @@
 import { Star, Heart } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
 
 const testimonials = [
   {
@@ -47,8 +46,6 @@ const testimonials = [
 ];
 
 const TestimonialSection = () => {
-  const { theme } = useTheme();
-  
   return (
     <section className="py-20 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

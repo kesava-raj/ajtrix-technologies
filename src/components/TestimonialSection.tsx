@@ -54,32 +54,6 @@ const testimonials: Testimonial[] = [
       solution: "We engineered a bespoke CRM tool specifically tailored to their school's workflow, ensuring secure data handling and streamlined administration.",
       results: "The custom CRM successfully centralized their operations. We also provided continuous post-deployment support to ensure seamless adoption by their staff."
     }
-  },
-  {
-    name: "Keerthiswaran",
-    subtitle: "Olympia Physio, Coimbatore",
-    quote: '"The team is incredibly responsive and built our website within the deadline."',
-    rankText: "Web Development",
-    avatarUrl: "https://ui-avatars.com/api/?name=Keerthiswaran&background=random",
-    caseStudy: {
-      title: "Delivering a Professional Healthcare Website on a Strict Deadline",
-      challenge: "Olympia Physio needed an immediate online presence to start accepting appointments but had a very tight turnaround time.",
-      solution: "Our highly responsive team worked efficiently to design, build, and deploy a fully functional clinic website without compromising quality.",
-      results: "The project was delivered flawlessly within the strict deadline, enabling the clinic to immediately start serving patients online."
-    }
-  },
-  {
-    name: "Ram Kumar",
-    subtitle: "RK Neuro biology and laboratory, Nagapattinam",
-    quote: '"We went from zero online presence to a fully functional website in under a week. The website has a custom admin portal that reduces time in storing client details easily"',
-    rankText: "Web Design & Custom Admin Portal",
-    avatarUrl: "https://ui-avatars.com/api/?name=Ram+Kumar&background=random",
-    caseStudy: {
-      title: "From Zero Online Presence to a Custom Admin Portal in a Week",
-      challenge: "RK Neuro biology and laboratory in Nagapattinam had no digital footprint and relied on time-consuming manual entry for storing client details.",
-      solution: "In under a week, we launched a fully functional website integrated with a bespoke secure admin portal designed specifically for patient data management.",
-      results: "The new system drastically reduced the time spent on administrative tasks, allowing the laboratory to store and access client details with unprecedented ease."
-    }
   }
 ];
 

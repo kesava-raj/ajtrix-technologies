@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useContactModal } from '../../context/ContactContext';
 import { X } from 'lucide-react';
@@ -17,6 +17,45 @@ const Linkedin = ({ className }: { className?: string }) => (
 
 const ContactModal: React.FC = () => {
   const { isOpen, closeModal } = useContactModal();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  // Replace this URL with your published Google Apps Script Web App URL
+  const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      // We use no-cors because Google Apps Script redirects and CORS can be tricky, 
+      // but the data still gets successfully saved to the sheet.
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData,
+      });
+      
+      setSubmitStatus('success');
+      form.reset();
+      
+      // Close modal after 2 seconds on success
+      setTimeout(() => {
+        closeModal();
+        setSubmitStatus('idle');
+      }, 2000);
+      
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -59,7 +98,7 @@ const ContactModal: React.FC = () => {
             </div>
 
             {/* Form */}
-            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); closeModal(); }}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Full Name */}
@@ -70,6 +109,8 @@ const ContactModal: React.FC = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
+                    required
                     placeholder="Manu Arora"
                     className="w-full px-4 py-3 bg-gray-100 dark:bg-[#18181b] border-none rounded-xl text-gray-900 dark:text-white text-[14px] focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-white/20 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-500"
                   />
@@ -83,6 +124,8 @@ const ContactModal: React.FC = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    required
                     placeholder="hello@johndoe.com"
                     className="w-full px-4 py-3 bg-gray-100 dark:bg-[#18181b] border-none rounded-xl text-gray-900 dark:text-white text-[14px] focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-white/20 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-500"
                   />
@@ -97,6 +140,7 @@ const ContactModal: React.FC = () => {
                 <input
                   type="text"
                   id="company"
+                  name="company"
                   placeholder="Aceternity Labs, LLC"
                   className="w-full px-4 py-3 bg-gray-100 dark:bg-[#18181b] border-none rounded-xl text-gray-900 dark:text-white text-[14px] focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-white/20 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-500"
                 />
@@ -105,10 +149,12 @@ const ContactModal: React.FC = () => {
               {/* Message */}
               <div className="space-y-2">
                 <label htmlFor="message" className="text-[14px] font-medium text-gray-700 dark:text-zinc-300">
-                  message
+                  Message
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  required
                   rows={4}
                   placeholder="Enter your message here"
                   className="w-full px-4 py-3 bg-gray-100 dark:bg-[#18181b] border-none rounded-xl text-gray-900 dark:text-white text-[14px] focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-white/20 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-500 resize-none"
@@ -118,10 +164,23 @@ const ContactModal: React.FC = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-3.5 mt-2 bg-gray-900 text-white dark:bg-white dark:text-black font-semibold rounded-full text-[15px] hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#09090b] focus:ring-gray-900 dark:focus:ring-white"
+                disabled={isSubmitting || submitStatus === 'success'}
+                className="w-full py-3.5 mt-2 bg-gray-900 text-white dark:bg-white dark:text-black font-semibold rounded-full text-[15px] hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#09090b] focus:ring-gray-900 dark:focus:ring-white disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2"
               >
-                Submit
+                {isSubmitting ? (
+                  <span>Sending...</span>
+                ) : submitStatus === 'success' ? (
+                  <span>Message Sent!</span>
+                ) : (
+                  <span>Submit</span>
+                )}
               </button>
+              
+              {submitStatus === 'error' && (
+                <p className="text-red-500 text-sm text-center mt-2">
+                  Something went wrong. Please try again.
+                </p>
+              )}
             </form>
 
             {/* Social Icons Footer */}

@@ -38,6 +38,15 @@ const featuredWorks = [
     description: "Building Excellence into Every Structure. EPG Building Services Pte Ltd delivers premium Mechanical & Electrical building services across Singapore—from prestigious condominiums to landmark commercial projects. EPG Building Services provides premium Mechanical & Electrical building services across Singapore. We developed a professional corporate website showcasing their certifications (BCA, bizSAFE, ISO), project references, and organizational structure for a B2B audience in the construction industry.",
     tags: ["Corporate professional layout", "Certifications display", "Service categories", "Project references showcase", "Organization chart", "Contact & inquiry system"],
     link: "https://epgbspl.com/"
+  },
+  {
+    id: 5,
+    title: "SSVSP Trust",
+    category: "Custom CRM Development",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    description: "Empowering Educational Management with Custom Solutions. SSVSP Trust in Bangalore was struggling with managing school operations and student data using disjointed manual processes. We engineered a bespoke CRM tool specifically tailored to their school's workflow, ensuring secure data handling and streamlined administration. The custom CRM successfully centralized their operations, complete with continuous post-deployment support.",
+    tags: ["Custom CRM Tool", "Educational Management", "Student Data Secure Handling", "Role-Based Access", "Automated Workflows", "Ongoing Support"],
+    link: "https://www.ssvsptrust.com/auth/login"
   }
 ];
 

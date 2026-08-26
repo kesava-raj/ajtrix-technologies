@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { useContactModal } from '../context/ContactContext';
@@ -7,8 +7,31 @@ import './Navbar.css';
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const { theme, toggleTheme } = useTheme();
   const { openModal } = useContactModal();
+
+  useEffect(() => {
+    const footer = document.querySelector('footer');
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(!entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: "0px",
+      }
+    );
+
+    observer.observe(footer);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -24,7 +47,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${!isVisible ? 'hidden' : ''}`}>
         <div className="navbar-container relative z-10">
           {/* Logo */}
           <div className="navbar-logo">

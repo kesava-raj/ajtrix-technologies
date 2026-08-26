@@ -8,18 +8,6 @@ import {
 } from "lucide-react";
 import { cn } from "../../lib/utils";
 
-const Github = ({ className }: { className?: string }) => (
-  <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-);
-
-const Twitter = ({ className }: { className?: string }) => (
-  <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-);
-
-const Youtube = ({ className }: { className?: string }) => (
-  <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-);
-
 const Linkedin = ({ className }: { className?: string }) => (
   <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
 );
@@ -29,49 +17,38 @@ export interface Testimonial {
   title: string;
   description: string;
   imageUrl: string;
-  githubUrl?: string;
-  twitterUrl?: string;
-  youtubeUrl?: string;
   linkedinUrl?: string;
 }
 
 const testimonials: Testimonial[] = [
   {
-    name: "Michael Chen",
-    title: "Senior Software Engineer, Cloud Infrastructure",
-    description:
-      "Working with this team completely changed our infrastructure game. The support and expertise were incredible. They delivered beyond our expectations and helped us scale to millions of users.",
-    imageUrl:
-      "https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    githubUrl: "#",
-    twitterUrl: "#",
-    youtubeUrl: "#",
-    linkedinUrl: "#",
+    name: "Kesavaraj Sethumadavan",
+    title: "Founder",
+    description: "Leading the vision and strategy for Ajtrix Technologies, ensuring we deliver innovative enterprise solutions that exceed client expectations.",
+    imageUrl: "https://ui-avatars.com/api/?name=Kesavaraj+Sethumadavan&background=0D8ABC&color=fff&size=470",
+    linkedinUrl: "https://www.linkedin.com/in/kesavaraj-sethumadavan-42b28b1b9/",
   },
   {
-    name: "Jessica Roberts",
-    title: "Lead Data Scientist, InsightX",
-    description:
-      "The data analytics platform they built gave our team the confidence and tools needed for true data-driven decisions. Their dashboarding capabilities went above and beyond our expectations.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=600&q=80",
-    githubUrl: "#",
-    twitterUrl: "#",
-    youtubeUrl: "#",
-    linkedinUrl: "#",
+    name: "Sanjay Prabhakaran",
+    title: "Business Consultant, CEI America",
+    description: "Driving business transformation and strategic consulting, helping our partners align their technology initiatives with core business objectives.",
+    imageUrl: "https://ui-avatars.com/api/?name=Sanjay+Prabhakaran&background=2E7D32&color=fff&size=470",
+    linkedinUrl: "https://www.linkedin.com/in/sanjay-prabhakaran/",
   },
   {
-    name: "William Carter",
-    title: "VP Product, NovaLabs",
-    description:
-      "NovaLabs helped our products find the perfect market fit. Their engineering team exceeded every delivery milestone and provided exceptional technical leadership.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80",
-    githubUrl: "#",
-    twitterUrl: "#",
-    youtubeUrl: "#",
-    linkedinUrl: "#",
+    name: "Raja Ramanan Meenakshi Sundaram",
+    title: "Business Consultant, IBM India",
+    description: "Bringing world-class enterprise consulting experience to deliver robust and scalable solutions tailored to complex business challenges.",
+    imageUrl: "https://ui-avatars.com/api/?name=Raja+Ramanan&background=1565C0&color=fff&size=470",
+    linkedinUrl: "https://www.linkedin.com/in/raja-ramanan-mg-291458287/",
   },
+  {
+    name: "Yousuf Suhail",
+    title: "Business Consultant, Cloud Kinetics",
+    description: "Specializing in cloud strategy and modern infrastructure solutions, enabling our clients to accelerate their digital transformation journey.",
+    imageUrl: "https://ui-avatars.com/api/?name=Yousuf+Suhail&background=F57C00&color=fff&size=470",
+    linkedinUrl: "https://www.linkedin.com/in/yousuf-suhail-43033923b/",
+  }
 ];
 
 export interface TestimonialCarouselProps {
@@ -91,9 +68,6 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
   const currentTestimonial = testimonials[currentIndex];
 
   const socialIcons = [
-    { icon: Github, url: currentTestimonial.githubUrl, label: "GitHub" },
-    { icon: Twitter, url: currentTestimonial.twitterUrl, label: "Twitter" },
-    { icon: Youtube, url: currentTestimonial.youtubeUrl, label: "YouTube" },
     { icon: Linkedin, url: currentTestimonial.linkedinUrl, label: "LinkedIn" },
   ];
 
@@ -155,10 +129,10 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
                     href={url || "#"}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='w-12 h-12 bg-[#121543] dark:bg-gray-100 rounded-full flex items-center justify-center transition-colors hover:bg-gray-800 dark:hover:bg-gray-300 hover:scale-105 cursor-pointer'
+                    className='w-12 h-12 bg-[#0A66C2] rounded-full flex items-center justify-center transition-colors hover:scale-105 cursor-pointer shadow-md'
                     aria-label={label}
                   >
-                    <IconComponent className='w-5 h-5 text-white dark:text-gray-900' />
+                    <IconComponent className='w-5 h-5 text-white' />
                   </a>
                 ))}
               </div>
@@ -221,10 +195,10 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
                     href={url || "#"}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='w-12 h-12 bg-gray-900 dark:bg-gray-100 rounded-full flex items-center justify-center transition-colors hover:bg-gray-800 dark:hover:bg-gray-200 cursor-pointer'
+                    className='w-12 h-12 bg-[#0A66C2] rounded-full flex items-center justify-center transition-colors hover:scale-105 cursor-pointer shadow-md'
                     aria-label={label}
                   >
-                    <IconComponent className='w-5 h-5 text-white dark:text-gray-900' />
+                    <IconComponent className='w-5 h-5 text-white' />
                   </a>
                 ))}
               </div>

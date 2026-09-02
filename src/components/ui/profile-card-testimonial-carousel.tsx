@@ -41,13 +41,6 @@ const testimonials: Testimonial[] = [
     description: "Bringing world-class enterprise consulting experience to deliver robust and scalable solutions tailored to complex business challenges.",
     imageUrl: "https://ui-avatars.com/api/?name=Raja+Ramanan&background=1565C0&color=fff&size=470",
     linkedinUrl: "https://www.linkedin.com/in/raja-ramanan-mg-291458287/",
-  },
-  {
-    name: "Yousuf Suhail",
-    title: "Business Consultant, Cloud Kinetics",
-    description: "Specializing in cloud strategy and modern infrastructure solutions, enabling our clients to accelerate their digital transformation journey.",
-    imageUrl: "https://ui-avatars.com/api/?name=Yousuf+Suhail&background=F57C00&color=fff&size=470",
-    linkedinUrl: "https://www.linkedin.com/in/yousuf-suhail-43033923b/",
   }
 ];
 

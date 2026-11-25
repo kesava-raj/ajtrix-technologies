@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import MoltenMetal from './components/MoltenMetal';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/Navbar';
@@ -67,6 +67,7 @@ function App() {
                 <Route path="/portfolio" element={<PortfolioPage />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
                 <Route path="/terms-of-service" element={<TermsPage />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </main>
 

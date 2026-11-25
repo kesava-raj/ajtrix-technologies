@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { SeoHead } from '../components/SeoHead';
 
 const TermsPage: React.FC = () => {
   useEffect(() => {
@@ -18,6 +19,11 @@ const TermsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-32 pb-24 relative z-10">
+      <SeoHead
+        title="Terms of Service | Ajtrix Technologies"
+        description="Terms of Service for Ajtrix Technologies across web design, branding, digital marketing, custom software, and consulting."
+        path="/terms-of-service"
+      />
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           variants={containerVariants}

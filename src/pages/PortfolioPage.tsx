@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
 import BorderBeamPanel from '../components/ui/border-beam-panel';
 import { useContact } from '../context/ContactContext';
+import { SeoHead } from '../components/SeoHead';
 
 const featuredWorks = [
   {
@@ -79,6 +80,18 @@ const PortfolioPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 relative z-10">
+      <SeoHead
+        title="Portfolio & Case Studies | Ajtrix Technologies (Chennai & Chicago)"
+        description="See live websites, custom CRMs, and 16+ industry templates delivered by Ajtrix Technologies for clients in Chennai, Bangalore, Singapore, and global markets."
+        path="/portfolio"
+        keywords="Ajtrix Portfolio, Website Case Studies Chennai, Custom CRM Case Study, Web Design Templates"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Ajtrix Technologies Portfolio',
+          url: 'https://www.ajtrix.com/portfolio',
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Page Header */}

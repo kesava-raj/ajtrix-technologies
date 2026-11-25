@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CheckCircle2, ChevronDown } from 'lucide-react';
 import { SERVICES } from '../../data/services';
 import { ShinyButton } from './shiny-button';
+import { trackEvent } from '../../lib/analytics';
 
 const GOOGLE_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbyKShmQAyH8k_H57mfrhdYDA1LNB6tX-6thj6Cds7WZBKk5hzuFzwGPMNKwmkipIjG9/exec';
@@ -48,6 +49,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       });
 
       setSubmitStatus('success');
+      trackEvent('generate_lead', {
+        service_category: selectedService || 'General Inquiry',
+      });
       form.reset();
       setSelectedService(defaultService ?? '');
 

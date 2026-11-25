@@ -1,0 +1,21 @@
+{
+  "name": "Ajtrix Technologies",
+  "short_name": "Ajtrix",
+  "description": "Web design, branding, digital marketing, custom software, digital transformation consulting, and presentation design in Chennai, India and Chicago, USA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050512",
+  "theme_color": "#121543",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logo-dark.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

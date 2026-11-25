@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { SeoHead } from '../components/SeoHead';
 
 const PrivacyPolicyPage: React.FC = () => {
   useEffect(() => {
@@ -18,6 +19,11 @@ const PrivacyPolicyPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-32 pb-24 relative z-10">
+      <SeoHead
+        title="Privacy Policy | Ajtrix Technologies"
+        description="Privacy Policy and cookie usage for Ajtrix Technologies (Chennai, Tamil Nadu, India and Chicago, Illinois, USA)."
+        path="/privacy-policy"
+      />
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           variants={containerVariants}
@@ -100,7 +106,7 @@ const PrivacyPolicyPage: React.FC = () => {
               </p>
               <address className="mt-4 not-italic text-gray-600 dark:text-gray-400 p-6 bg-gray-50 dark:bg-white/5 rounded-xl border border-gray-200 dark:border-white/10 backdrop-blur-sm">
                 <strong>Ajtrix Technologies</strong><br />
-                Chennai, Tamil Nadu, India<br />
+                Chennai, Tamil Nadu, India · Chicago, Illinois, USA<br />
                 hello@ajtrix.com
               </address>
             </section>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
 import { ShinyButton } from './ui/shiny-button';
 import { useContact } from '../context/ContactContext';
+import { openCookiePreferences } from '../lib/analytics';
 
 const Footer: React.FC = () => {
   const { scrollToContact } = useContact();
@@ -106,9 +107,16 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        <div className="flex space-x-6">
+        <div className="flex flex-wrap justify-center gap-6">
           <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
           <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
+          <button
+            type="button"
+            onClick={openCookiePreferences}
+            className="hover:text-white transition-colors cursor-pointer"
+          >
+            Cookie Preferences
+          </button>
         </div>
       </div>
     </footer>

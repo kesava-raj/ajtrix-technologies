@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import MoltenMetal from './components/MoltenMetal';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/Navbar';
@@ -7,7 +8,10 @@ import Footer from './components/Footer';
 import AboutSummary from './components/AboutSummary';
 import ServicesSummary from './components/ServicesSummary';
 import PortfolioSummary from './components/PortfolioSummary';
+import FaqSection from './components/FaqSection';
 import ContactSection from './components/ContactSection';
+import CookieConsent from './components/CookieConsent';
+import { SeoHead } from './components/SeoHead';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
@@ -16,10 +20,28 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
 import { useTheme } from './context/ThemeContext';
 import { ContactProvider } from './context/ContactContext';
+import { trackPageView } from './lib/analytics';
 import './App.css';
+
+const PageTracker = () => {
+  const { pathname, search } = useLocation();
+
+  useEffect(() => {
+    trackPageView(`${pathname}${search}`);
+  }, [pathname, search]);
+
+  return null;
+};
 
 const HomePage = () => (
   <>
+    <SeoHead
+      title="Ajtrix Technologies | Web Design, Custom Software & Digital Growth in Chennai & Chicago"
+      description="Ajtrix Technologies builds custom websites, brand identities, digital marketing campaigns, custom software, digital transformation roadmaps, and business presentations from Chennai, Tamil Nadu and Chicago, Illinois."
+      path="/"
+      keywords="Web Design Chennai, Web Development Tamil Nadu, Custom Software Chicago, Digital Marketing Illinois, Branding Agency Chennai, Ajtrix Technologies"
+    />
+
     {/* Hero Section */}
     <HeroSection />
 
@@ -35,6 +57,9 @@ const HomePage = () => (
     {/* Testimonials */}
     <TestimonialSection />
 
+    {/* FAQ Section (AEO / GEO) */}
+    <FaqSection />
+
     {/* Contact Section */}
     <ContactSection />
   </>
@@ -45,6 +70,7 @@ function App() {
 
   return (
     <Router>
+      <PageTracker />
       <ContactProvider>
         <div className="app-container">
           <div className="background-canvas">
@@ -74,6 +100,7 @@ function App() {
             {/* Footer */}
             <Footer />
           </div>
+          <CookieConsent />
         </div>
       </ContactProvider>
     </Router>

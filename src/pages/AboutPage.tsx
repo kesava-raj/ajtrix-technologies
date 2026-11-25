@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Shield, Target, Zap, Users, Globe2, Code2 } from 'lucide-react';
 import HowItWorks from '../components/ui/how-it-works';
 import BorderBeamPanel from '../components/ui/border-beam-panel';
+import { SeoHead } from '../components/SeoHead';
 
 const advantages = [
   {
@@ -21,8 +22,8 @@ const advantages = [
   },
   {
     icon: <Globe2 className="w-6 h-6 text-indigo-500" />,
-    title: "04. International Experience",
-    description: "From Singapore to India to the Middle East, we've delivered projects across geographies and understand diverse market needs."
+    title: "04. Chennai, Chicago & Global Reach",
+    description: "With presence in Chennai, Tamil Nadu and Chicago, Illinois—plus projects across Singapore and the Middle East—we understand diverse market needs."
   },
   {
     icon: <Code2 className="w-6 h-6 text-indigo-500" />,
@@ -43,6 +44,19 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 relative z-10">
+      <SeoHead
+        title="About Ajtrix Technologies | Chennai, Tamil Nadu & Chicago, Illinois"
+        description="Meet Ajtrix Technologies—engineers, designers, and strategists operating from Chennai, India and Chicago, USA across websites, branding, digital marketing, and custom software."
+        path="/about"
+        keywords="About Ajtrix Technologies, Software Studio Chennai, Digital Agency Chicago Illinois, Web Design Tamil Nadu"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: 'About Ajtrix Technologies',
+          url: 'https://www.ajtrix.com/about',
+          mainEntity: { '@id': 'https://www.ajtrix.com/#organization' },
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Header Section */}

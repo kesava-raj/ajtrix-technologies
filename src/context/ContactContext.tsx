@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 import type { ReactNode } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { trackEvent } from '../lib/analytics';
 
 interface ContactContextType {
   initialService: string | null;
@@ -16,6 +17,10 @@ export const ContactProvider: React.FC<{ children: ReactNode }> = ({ children })
 
   const scrollToContact = (service?: string) => {
     setInitialService(service ?? null);
+    trackEvent('contact_cta_click', {
+      source_path: location.pathname,
+      service: service ?? 'general',
+    });
 
     if (location.pathname === '/') {
       const el = document.getElementById('get-in-touch');

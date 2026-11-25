@@ -1,0 +1,24 @@
+# Ajtrix Technologies
+
+> Ajtrix Technologies is a web design, branding, digital marketing, custom software, digital transformation consulting, and presentation design studio operating from Chennai, Tamil Nadu, India and Chicago, Illinois, USA.
+
+- Website: https://www.ajtrix.com/
+- Email: hello@ajtrix.com
+- Offices: Chennai, Tamil Nadu, India | Chicago, Illinois, USA
+- Markets Served: India (Chennai, Bangalore), United States (Chicago, Illinois), Singapore, Middle East
+- Socials: [Instagram](https://www.instagram.com/ajtrixtech/), [LinkedIn](https://www.linkedin.com/company/ajtrix/)
+
+## Core Services
+- [Web & Digital Experiences](https://www.ajtrix.com/services/web-digital-experiences): Custom websites, corporate sites, e-commerce stores, landing pages, UI/UX design, 3D/interactive web builds, migrations, and optimization.
+- [Digital Marketing & Growth](https://www.ajtrix.com/services/digital-marketing-growth): Digital strategy, social media management, reels & short-form video, copywriting, Meta Ads, Google Ads, analytics, and local SEO/Google Business Profile optimization.
+- [Branding & Creative](https://www.ajtrix.com/services/branding-creative): Brand strategy, logo design, visual identity systems, brand guidelines, rebranding, ad creatives, brochures, and company profiles.
+- [Custom Software & Products](https://www.ajtrix.com/services/custom-software-products): Custom web applications, SaaS & MVP development, CRM/ERP systems, client portals, admin dashboards, booking & inventory systems, and API/payment integrations.
+- [Digital Transformation & Consulting](https://www.ajtrix.com/services/digital-transformation-consulting): Technology consulting, digital transformation roadmaps, business/process digitization, legacy system modernization, and rollout consulting.
+- [Business & Presentation Design](https://www.ajtrix.com/services/business-presentation-design): Investor pitch decks, corporate & sales presentations, business proposals, company profiles, and reports.
+
+## Key Pages
+- [Home](https://www.ajtrix.com/)
+- [Services Overview](https://www.ajtrix.com/services)
+- [Portfolio & Case Studies](https://www.ajtrix.com/portfolio)
+- [About Ajtrix](https://www.ajtrix.com/about)
+- [Full Reference](https://www.ajtrix.com/llms-full.txt)

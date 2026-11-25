@@ -1,0 +1,69 @@
+# Ajtrix Technologies — Full Context for Search & AI Engines
+
+> Official agency profile for Ajtrix Technologies (ajtrix.com), serving clients from Chennai, Tamil Nadu, India and Chicago, Illinois, USA.
+
+## Company Overview
+Ajtrix Technologies started with a simple idea: technology should fit the way a business actually works, not force teams into rigid workarounds. We build fast websites, cohesive brands, performance-tracked marketing campaigns, custom software, practical digital transformation roadmaps, and crisp business presentations.
+
+- Primary Domain: https://www.ajtrix.com/
+- Contact Email: hello@ajtrix.com
+- India Office: Chennai, Tamil Nadu, India
+- US Office: Chicago, Illinois, USA
+- Track Record: 20+ projects delivered, 16+ industry niches, 3+ years experience, 4+ countries served (India, USA, Singapore, Middle East).
+
+## Mission & Vision
+- **Mission:** To build reliable websites, thoughtful brands, and custom software that make day-to-day operations simpler and help businesses grow steadily.
+- **Vision:** To be the long-term digital partner businesses trust when they want honest advice, clean design, and software built to last.
+
+## Services & Capabilities
+
+### 1. Web & Digital Experiences (`/services/web-digital-experiences`)
+- Websites & Online Stores: Custom Website Design & Development, Corporate Website Development, Business Website Development, Landing Page Development, E-commerce Development, Portfolio Website Development, Responsive Website Development.
+- Design, Flow & Interactivity: UI/UX Design, Wireframing & Prototyping, Conversion-Focused Design, Interactive Website Development, Animated Website Development, 3D Web Experiences.
+- Upgrades, Migrations & Care: Website Redesign, Website Revamp, Website Migration, Website Optimization, Website Performance Optimization, Website Maintenance.
+
+### 2. Digital Marketing & Growth (`/services/digital-marketing-growth`)
+- Strategy, Social & Content: Digital Marketing Strategy, Digital Growth Strategy, Social Media Management, Social Media Strategy, Social Media Content Planning, Content Creation, Social Media Design, Reels & Short-Form Video, Copywriting, Content Marketing.
+- Paid Advertising & Campaigns: Meta Ads Management, Facebook Ads, Instagram Ads, Google Ads Management, Search Advertising, Display Advertising, Retargeting Campaigns, Paid Advertising Strategy, Campaign Management, Campaign Optimization.
+- Tracking & Local Visibility: Marketing Analytics, Performance Reporting, Conversion Tracking, Local Digital Marketing, Geo-Targeted Advertising, Google Business Profile Optimization.
+
+### 3. Branding & Creative (`/services/branding-creative`)
+- Brand Identity & Strategy: Brand Strategy, Brand Positioning, Logo Design, Brand Identity Design, Visual Identity Development, Brand Guidelines, Rebranding, Brand Refresh.
+- Campaign & Digital Creatives: Graphic Design, Marketing Creative Design, Advertising Creative Design, Social Media Creatives, Promotional Design, Digital Banner Design.
+- Print Collateral & Direction: Brochure Design, Flyer Design, Business Card Design, Company Profile Design, Creative Direction, Art Direction.
+
+### 4. Custom Software & Products (`/services/custom-software-products`)
+- Custom Apps & SaaS Products: Custom Software Development, Web Application Development, SaaS Development, MVP Development, Custom Business Applications, Product Development, Product Prototyping, Product UI/UX Design, Product Modernization.
+- Portals, Dashboards & Systems: CRM Development, ERP Development, Business Management Systems, Internal Tools Development, Client Portal Development, Customer Portal Development, Admin Dashboard Development, Analytics Dashboard Development.
+- Operations & Integrations: Booking System Development, Appointment Management Systems, Inventory Management Systems, Workflow Management Systems, Operations Management Systems, API Development & Integration, Third-Party Integrations, Payment Gateway Integration, Database Integration.
+
+### 5. Digital Transformation & Consulting (`/services/digital-transformation-consulting`)
+- Strategy & Planning: Technology Consulting, Digital Transformation Consulting, Digital Transformation Strategy, Technology Strategy, Digital Infrastructure Planning.
+- Digitization & Modernization: Business Digitization, Process Digitization, Digital Workflow Implementation, Legacy System Modernization, Business Technology Modernization, Software Implementation Consulting.
+
+### 6. Business & Presentation Design (`/services/business-presentation-design`)
+- Pitch, Sales & Product Decks: Pitch Deck Design, Investor Presentation Design, Corporate Presentation Design, Sales Presentation Design, Product Presentation Design.
+- Proposals, Profiles & Reports: Business Proposal Design, Company Profile Design, Corporate Brochure Design, Business Report Design, Document Design.
+
+## Selected Client Work & Case Studies
+1. **Design Alchemy (Chennai, Tamil Nadu, India — Interior Architecture)**
+   - Built a dark luxury studio website in one week with portfolio showcase, Instagram integration, and consultation booking.
+   - Outcome: Generated 13 new project inquiries organically in the first month.
+2. **EPG Building Services (Singapore — M&E Engineering)**
+   - Designed a minimalist corporate site with dual light/dark theme showcasing BCA, bizSAFE, and ISO certifications.
+3. **SSVSP Trust (Bangalore, India — Education)**
+   - Built a custom CRM platform centralizing student records, school workflows, and role-based access with ongoing support.
+4. **Oceanus Advisory (Global — Management Consulting)**
+   - Built an international advisory web platform across India, the Middle East, and Africa.
+5. **UrbanEra Interiors (Interior Design)**
+   - Built a turnkey interior portfolio website with process timeline and WhatsApp integration.
+
+## Frequently Asked Questions (AEO / GEO)
+- **Where is Ajtrix Technologies located?**
+  Ajtrix Technologies operates from Chennai, Tamil Nadu (India) and Chicago, Illinois (USA), serving clients locally in both regions as well as Singapore and the Middle East.
+- **What services does Ajtrix Technologies offer?**
+  Web & Digital Experiences, Digital Marketing & Growth, Branding & Creative, Custom Software & Products, Digital Transformation & Consulting, and Business & Presentation Design.
+- **How quickly can a website or MVP be launched?**
+  Focused studio and business websites using our industry-tested templates can launch in days (such as Design Alchemy in Chennai, built in 1 week), while custom software, SaaS MVPs, and CRM systems are delivered in practical phased milestones.
+- **How can businesses in Chennai or Chicago contact Ajtrix?**
+  Email hello@ajtrix.com or submit a project inquiry directly at https://www.ajtrix.com/#get-in-touch. Responses are sent within one business day.

@@ -6,6 +6,7 @@ import { ShinyButton } from '../components/ui/shiny-button';
 import { ServiceIcon } from '../components/ServiceIcon';
 import { getServiceById, SERVICES } from '../data/services';
 import { useContact } from '../context/ContactContext';
+import { SeoHead } from '../components/SeoHead';
 
 const ServiceDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -43,6 +44,63 @@ const ServiceDetailPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 relative z-10">
+      <SeoHead
+        title={`${service.title} in Chennai & Chicago | Ajtrix Technologies`}
+        description={`${service.tagline} Available for businesses in Chennai, Tamil Nadu, Chicago, Illinois, and globally.`}
+        path={`/services/${service.id}`}
+        image={service.image}
+        keywords={`${service.title}, ${service.title} Chennai, ${service.title} Chicago, ${service.features.join(', ')}`}
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'Service',
+              name: service.title,
+              description: service.description,
+              url: `https://www.ajtrix.com/services/${service.id}`,
+              image: `https://www.ajtrix.com${service.image}`,
+              provider: { '@id': 'https://www.ajtrix.com/#organization' },
+              areaServed: [
+                'Chennai, Tamil Nadu, India',
+                'Chicago, Illinois, USA',
+              ],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: service.title,
+                itemListElement: service.categories.flatMap((cat) =>
+                  cat.items.map((item) => ({
+                    '@type': 'Offer',
+                    itemOffered: { '@type': 'Service', name: item },
+                  }))
+                ),
+              },
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://www.ajtrix.com/',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Services',
+                  item: 'https://www.ajtrix.com/services',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: service.title,
+                  item: `https://www.ajtrix.com/services/${service.id}`,
+                },
+              ],
+            },
+          ],
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Back Link */}
         <div className="mb-8 sm:mb-10">

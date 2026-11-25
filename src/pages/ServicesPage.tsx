@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import BorderBeamPanel from '../components/ui/border-beam-panel';
 import { SERVICES } from '../data/services';
 import { ServiceIcon } from '../components/ServiceIcon';
+import { SeoHead } from '../components/SeoHead';
 
 const ServicesPage: React.FC = () => {
   // Scroll to top on page load
@@ -13,6 +14,12 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 relative z-10">
+      <SeoHead
+        title="Services We Offer | Ajtrix Technologies (Chennai & Chicago)"
+        description="Explore our six core services in Chennai, Tamil Nadu and Chicago, Illinois: Web & Digital Experiences, Digital Marketing & Growth, Branding & Creative, Custom Software, Consulting, and Presentation Design."
+        path="/services"
+        keywords="Web Design Chennai, Digital Marketing Chicago, Branding Creative Agency, Custom Software Development Illinois, Digital Transformation Tamil Nadu"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Page Header */}
         <div className="text-center mb-14 sm:mb-20 md:mb-24">

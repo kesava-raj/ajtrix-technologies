@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
             variants={itemVariants}
             className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl leading-relaxed"
           >
-            Transform your digital presence with cutting-edge design, seamless animations, and strategic development. We engineer high-converting scalable solutions for modern businesses.
+            We design thoughtful websites, brands, and custom software built around how your business actually works.
           </motion.p>
 
           {/* CTAs */}

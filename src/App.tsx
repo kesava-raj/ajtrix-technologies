@@ -3,15 +3,14 @@ import MoltenMetal from './components/MoltenMetal';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/Navbar';
 import TestimonialSection from './components/TestimonialSection';
-import TeamSection from './components/TeamSection';
 import Footer from './components/Footer';
 import AboutSummary from './components/AboutSummary';
 import ServicesSummary from './components/ServicesSummary';
 import PortfolioSummary from './components/PortfolioSummary';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 import PortfolioPage from './pages/PortfolioPage';
-import TeamPage from './pages/TeamPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
 import { useTheme } from './context/ThemeContext';
@@ -35,9 +34,6 @@ const HomePage = () => (
 
     {/* Testimonials */}
     <TestimonialSection />
-
-    {/* Team Section */}
-    <TeamSection />
   </>
 );
 
@@ -64,8 +60,8 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/services" element={<ServicesPage />} />
+                <Route path="/services/:slug" element={<ServiceDetailPage />} />
                 <Route path="/portfolio" element={<PortfolioPage />} />
-                <Route path="/team" element={<TeamPage />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
                 <Route path="/terms-of-service" element={<TermsPage />} />
               </Routes>

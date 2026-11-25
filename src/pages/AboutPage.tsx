@@ -51,7 +51,7 @@ const AboutPage: React.FC = () => {
             About <span className="text-indigo-600 dark:text-indigo-400">Ajtrix</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            We are a collective of engineers, designers, and AI specialists dedicated to transforming ambitious ideas into digital realities.
+            We are a team of engineers, designers, and strategists who help businesses build sharper digital products, stronger brands, and cleaner workflows.
           </p>
         </div>
 
@@ -62,10 +62,10 @@ const AboutPage: React.FC = () => {
               Our Story
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              Founded on the belief that software should adapt to the business (not the other way around), Ajtrix Technologies was born to bridge the gap between complex operational needs and elegant technological solutions.
+              Ajtrix Technologies started with a simple idea: technology should fit the way a business actually works, not force teams into rigid workarounds.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              We recognized early on that the future of business operations lies in intelligence and automation. Today, we stand at the forefront of AI integration, deploying custom agentic systems, voice automation, and bespoke web platforms that empower our clients to operate faster, smarter, and with unprecedented efficiency.
+              Today we partner with growing companies across websites, branding, digital marketing, custom software, digital transformation, and presentation design, helping them ship faster and communicate with clarity.
             </p>
           </div>
           <div className="w-full lg:w-1/2">
@@ -88,7 +88,7 @@ const AboutPage: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h3>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-              To architect and deliver high-performance digital ecosystems that automate the mundane, secure the critical, and scale the ambitious for enterprises worldwide.
+              To build reliable websites, thoughtful brands, and custom software that make day-to-day operations simpler and help businesses grow steadily.
             </p>
           </div>
           <div className="bg-white/50 dark:bg-[#111330]/50 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-10 md:p-12 shadow-xl hover:-translate-y-2 transition-transform duration-300">
@@ -97,7 +97,7 @@ const AboutPage: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Vision</h3>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-              To be the definitive technology partner for modern businesses, recognized for setting the gold standard in AI integration and custom software engineering.
+              To be the long-term digital partner businesses trust when they want honest advice, clean design, and software built to last.
             </p>
           </div>
         </div>

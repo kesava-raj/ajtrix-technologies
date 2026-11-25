@@ -6,21 +6,21 @@ import { ServiceIcon } from './ServiceIcon';
 
 const ServicesSummary: React.FC = () => {
   return (
-    <section className="py-24 px-6 md:px-12 relative z-10" id="services">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 relative z-10" id="services">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Services We Offer</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight">Services We Offer</h2>
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             From websites and branding to custom software and growth campaigns, here is what our team builds with you.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 sm:mb-16">
           {SERVICES.map((service) => (
             <Link
               to={`/services/${service.id}`}
               key={service.id}
-              className="group bg-white/50 dark:bg-[#111330]/50 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl p-8 hover:transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
+              className="group bg-white/50 dark:bg-[#111330]/50 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl p-6 sm:p-8 hover:transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
             >
               <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center mb-6">
                 <ServiceIcon icon={service.icon} className="w-6 h-6 text-indigo-500 dark:text-indigo-400" />

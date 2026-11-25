@@ -62,7 +62,7 @@ const Card = ({
 
   return (
     <div
-      className={`relative w-full md:w-[280px] transition-transform duration-300 hover:z-30 hover:scale-105 ${rotate} ${className}`}
+      className={`relative w-full md:w-[280px] transition-transform duration-300 hover:z-30 hover:scale-105 max-md:rotate-0 ${rotate} ${className}`}
     >
       <div className="bg-white/50 dark:bg-[#111330]/50 backdrop-blur-xl p-2 rounded-[25px] shadow-xl border border-gray-200 dark:border-white/10">
         <Pin className={`w-8 h-8 ${textColor} z-20 mb-6 mx-auto`} />
@@ -168,7 +168,7 @@ export default function HowItWorks({
   return (
     <LazyMotion features={domAnimation}>
       <div
-        className={`bg-transparent max-md:pt-10 max-md:pb-25 md:py-20 px-8 relative ${className}`}
+        className={`bg-transparent max-md:pt-8 max-md:pb-12 md:py-20 px-4 sm:px-8 relative ${className}`}
       >
         {/* Background grids */}
         <div

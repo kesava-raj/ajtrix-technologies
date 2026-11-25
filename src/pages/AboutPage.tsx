@@ -42,21 +42,21 @@ const AboutPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-32 pb-24 relative z-10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Header Section */}
-        <div className="text-center mb-24">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
+        <div className="text-center mb-16 sm:mb-20 md:mb-24">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
             About <span className="text-indigo-600 dark:text-indigo-400">Ajtrix</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
             We are a team of engineers, designers, and strategists who help businesses build sharper digital products, stronger brands, and cleaner workflows.
           </p>
         </div>
 
         {/* Our Story Section */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center mb-32">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center mb-20 sm:mb-24 md:mb-32">
           <div className="w-full lg:w-1/2 space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
               Our Story

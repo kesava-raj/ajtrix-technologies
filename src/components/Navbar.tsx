@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { useContactModal } from '../context/ContactContext';
+import { useContact } from '../context/ContactContext';
 import { ShinyButton } from './ui/shiny-button';
 import './Navbar.css';
 
@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const { theme, toggleTheme } = useTheme();
-  const { openModal } = useContactModal();
+  const { scrollToContact } = useContact();
 
   useEffect(() => {
     const footer = document.querySelector('footer');
@@ -52,9 +52,9 @@ const Navbar: React.FC = () => {
           <div className="navbar-logo">
             <Link to="/">
               {theme === 'light' ? (
-                <img src="/logo-light.png" alt="ajtrix" className="h-10 object-contain" />
+                <img src="/logo-light.png" alt="ajtrix" className="h-8 sm:h-10 object-contain" />
               ) : (
-                <img src="/logo-dark.png" alt="ajtrix" className="h-10 object-contain" />
+                <img src="/logo-dark.png" alt="ajtrix" className="h-8 sm:h-10 object-contain" />
               )}
             </Link>
           </div>
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
 
           {/* Right side - Contact Button & Mobile Toggle */}
           <div className="navbar-right">
-            <ShinyButton onClick={openModal} className="desktop-only">
+            <ShinyButton onClick={() => scrollToContact()} className="desktop-only">
               CONTACT US
             </ShinyButton>
             
@@ -112,7 +112,7 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="mobile-menu-footer">
-          <ShinyButton onClick={() => { toggleMenu(); openModal(); }} className="mobile-contact-btn w-full">
+          <ShinyButton onClick={() => { toggleMenu(); scrollToContact(); }} className="mobile-contact-btn w-full">
             CONTACT US
           </ShinyButton>
         </div>

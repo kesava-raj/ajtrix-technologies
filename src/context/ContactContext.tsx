@@ -1,31 +1,47 @@
 import React, { createContext, useContext, useState } from 'react';
 import type { ReactNode } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-interface ContactModalContextType {
-  isOpen: boolean;
-  openModal: () => void;
-  closeModal: () => void;
+interface ContactContextType {
+  initialService: string | null;
+  scrollToContact: (service?: string) => void;
 }
 
-const ContactModalContext = createContext<ContactModalContextType | undefined>(undefined);
+const ContactContext = createContext<ContactContextType | undefined>(undefined);
 
-export const ContactModalProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const ContactProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [initialService, setInitialService] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+  const scrollToContact = (service?: string) => {
+    setInitialService(service ?? null);
+
+    if (location.pathname === '/') {
+      const el = document.getElementById('get-in-touch');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      if (location.hash !== '#get-in-touch') {
+        navigate('/#get-in-touch', { replace: true });
+      }
+      return;
+    }
+
+    navigate('/#get-in-touch');
+  };
 
   return (
-    <ContactModalContext.Provider value={{ isOpen, openModal, closeModal }}>
+    <ContactContext.Provider value={{ initialService, scrollToContact }}>
       {children}
-    </ContactModalContext.Provider>
+    </ContactContext.Provider>
   );
 };
 
-export const useContactModal = (): ContactModalContextType => {
-  const context = useContext(ContactModalContext);
+export const useContact = (): ContactContextType => {
+  const context = useContext(ContactContext);
   if (context === undefined) {
-    throw new Error('useContactModal must be used within a ContactModalProvider');
+    throw new Error('useContact must be used within a ContactProvider');
   }
   return context;
 };

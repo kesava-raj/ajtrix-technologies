@@ -12,32 +12,32 @@ const ServicesPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-32 pb-24 relative z-10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Page Header */}
-        <div className="text-center mb-24">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
+        <div className="text-center mb-14 sm:mb-20 md:mb-24">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
             Services We <span className="text-indigo-600 dark:text-indigo-400">Offer</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Whether you need a sharper online presence, consistent marketing, custom software, or clear presentation materials, here is how we help businesses move forward.
           </p>
         </div>
 
         {/* Services List */}
-        <div className="space-y-24">
+        <div className="space-y-16 sm:space-y-20 md:space-y-24">
           {SERVICES.map((service, index) => (
             <div 
               key={service.id} 
               id={service.id}
-              className={`flex flex-col lg:flex-row gap-12 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+              className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
             >
               {/* Content Side */}
               <div className="w-full lg:w-1/2">
-                <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mb-8">
-                  <ServiceIcon icon={service.icon} className="w-10 h-10 text-indigo-500" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-indigo-50 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mb-6 sm:mb-8">
+                  <ServiceIcon icon={service.icon} className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-500" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
                   <Link to={`/services/${service.id}`} className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                     {service.title}
                   </Link>

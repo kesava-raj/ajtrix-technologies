@@ -5,11 +5,11 @@ import BorderBeamPanel from '../components/ui/border-beam-panel';
 import { ShinyButton } from '../components/ui/shiny-button';
 import { ServiceIcon } from '../components/ServiceIcon';
 import { getServiceById, SERVICES } from '../data/services';
-import { useContactModal } from '../context/ContactContext';
+import { useContact } from '../context/ContactContext';
 
 const ServiceDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { openModal } = useContactModal();
+  const { scrollToContact } = useContact();
   const service = getServiceById(slug);
 
   useEffect(() => {
@@ -42,10 +42,10 @@ const ServiceDetailPage: React.FC = () => {
   const nextService = SERVICES[(currentIndex + 1) % SERVICES.length];
 
   return (
-    <div className="min-h-screen pt-32 pb-24 relative z-10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Back Link */}
-        <div className="mb-10">
+        <div className="mb-8 sm:mb-10">
           <Link
             to="/services"
             className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
@@ -56,22 +56,25 @@ const ServiceDetailPage: React.FC = () => {
         </div>
 
         {/* Hero Section */}
-        <div className="flex flex-col lg:flex-row gap-12 items-center mb-24">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-16 sm:mb-20 md:mb-24">
           <div className="w-full lg:w-1/2">
-            <div className="w-16 h-16 bg-indigo-50 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mb-6">
-              <ServiceIcon icon={service.icon} className="w-8 h-8 text-indigo-500" />
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-indigo-50 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mb-6">
+              <ServiceIcon icon={service.icon} className="w-7 h-7 sm:w-8 sm:h-8 text-indigo-500" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 tracking-tight text-gray-900 dark:text-white leading-tight">
               {service.title}
             </h1>
-            <p className="text-xl text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
               {service.tagline}
             </p>
             <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
               {service.description}
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <ShinyButton onClick={openModal} className="px-8 py-4 text-base">
+              <ShinyButton
+                onClick={() => scrollToContact(service.title)}
+                className="px-8 py-4 text-base"
+              >
                 Discuss Your Project
               </ShinyButton>
             </div>
@@ -225,7 +228,7 @@ const ServiceDetailPage: React.FC = () => {
         </div>
 
         {/* Bottom CTA & Next Service */}
-        <div className="bg-white/60 dark:bg-[#111330]/60 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="bg-white/60 dark:bg-[#111330]/60 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 sm:gap-8">
           <div className="space-y-3 max-w-xl">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
               Have a project in mind for {service.title}?
@@ -234,13 +237,16 @@ const ServiceDetailPage: React.FC = () => {
               Tell us what you are trying to build or fix, and we will share a clear scope and timeline.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <ShinyButton onClick={openModal} className="px-7 py-3.5 text-base">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full md:w-auto">
+            <ShinyButton
+              onClick={() => scrollToContact(service.title)}
+              className="w-full sm:w-auto px-7 py-3.5 text-base justify-center"
+            >
               Start a Conversation
             </ShinyButton>
             <Link
               to={`/services/${nextService.id}`}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-gray-300 dark:border-white/15 text-sm font-semibold text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-gray-300 dark:border-white/15 text-sm font-semibold text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/5 transition-colors w-full sm:w-auto"
             >
               <span>Next: {nextService.title}</span>
               <ArrowRight className="w-4 h-4" />

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
 import BorderBeamPanel from '../components/ui/border-beam-panel';
+import { useContact } from '../context/ContactContext';
 
 const featuredWorks = [
   {
@@ -70,38 +71,40 @@ const industryTemplates = [
 ];
 
 const PortfolioPage: React.FC = () => {
+  const { scrollToContact } = useContact();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="min-h-screen pt-32 pb-24 relative z-10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Page Header */}
-        <div className="text-center mb-24">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
+        <div className="text-center mb-14 sm:mb-20 md:mb-24">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
             Our <span className="text-indigo-600 dark:text-indigo-400">Portfolio</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Explore our curated showcase of live, fully responsive projects designed for real businesses, and our premium industry-specific templates.
           </p>
         </div>
 
         {/* Featured Client Works */}
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Featured Client Works</h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg">Live projects optimized for conversions and measurable results.</p>
+        <div className="mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Featured Client Works</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg">Live projects optimized for conversions and measurable results.</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-32">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 mb-20 sm:mb-24 md:mb-32">
           {featuredWorks.map((project, index) => (
             <div 
               key={project.id} 
-              className={`group relative bg-white/50 dark:bg-[#111330]/50 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-[2.5rem] overflow-hidden hover:shadow-2xl transition-all duration-500 ${index % 2 !== 0 ? 'lg:translate-y-12' : ''}`}
+              className={`group relative bg-white/50 dark:bg-[#111330]/50 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-3xl sm:rounded-[2.5rem] overflow-hidden hover:shadow-2xl transition-all duration-500 ${index % 2 !== 0 ? 'lg:translate-y-12' : ''}`}
             >
               {/* Image Container */}
-              <div className="relative h-[300px] sm:h-[400px] w-full overflow-hidden">
+              <div className="relative h-56 sm:h-72 md:h-[380px] w-full overflow-hidden">
                 <div className="absolute inset-0 bg-gray-900/10 dark:bg-black/30 group-hover:bg-transparent transition-colors duration-500 z-10" />
                 <img 
                   src={project.image} 
@@ -110,28 +113,34 @@ const PortfolioPage: React.FC = () => {
                 />
                 
                 {/* Overlay Links */}
-                <div className="absolute top-6 right-6 z-20 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 flex gap-3 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 lg:translate-y-4 lg:group-hover:translate-y-0">
                   {project.link && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white hover:bg-indigo-700 transition-colors shadow-lg">
-                      <ExternalLink className="w-5 h-5" />
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open ${project.title}`}
+                      className="w-10 h-10 sm:w-12 sm:h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white hover:bg-indigo-700 transition-colors shadow-lg"
+                    >
+                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                     </a>
                   )}
                 </div>
               </div>
 
               {/* Content Container */}
-              <div className="p-8 md:p-10">
+              <div className="p-6 sm:p-8 md:p-10">
                 <div className="mb-4">
-                  <span className="inline-block px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold rounded-full">
+                  <span className="inline-block px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs sm:text-sm font-semibold rounded-full">
                     {project.category}
                   </span>
                 </div>
                 
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-8">
+                <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                   {project.description}
                 </p>
 
@@ -170,15 +179,19 @@ const PortfolioPage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-40 text-center bg-indigo-600 dark:bg-indigo-900/40 rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+        <div className="mt-20 sm:mt-28 md:mt-36 text-center bg-indigo-600 dark:bg-indigo-900/40 rounded-3xl md:rounded-[3rem] p-8 sm:p-12 md:p-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
-          <h2 className="relative z-10 text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="relative z-10 text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
             Ready to Transform Your Digital Presence?
           </h2>
-          <p className="relative z-10 text-indigo-100 text-lg mb-10 max-w-2xl mx-auto">
+          <p className="relative z-10 text-indigo-100 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">
             Whether you need a custom website built from scratch or want to launch quickly with one of our industry templates, we're here to make it happen.
           </p>
-          <button className="relative z-10 px-8 py-4 bg-white text-indigo-600 font-bold rounded-full hover:bg-gray-50 transition-colors shadow-xl">
+          <button
+            type="button"
+            onClick={() => scrollToContact()}
+            className="relative z-10 px-7 sm:px-8 py-3.5 sm:py-4 bg-white text-indigo-600 font-bold rounded-full hover:bg-gray-50 transition-colors shadow-xl cursor-pointer"
+          >
             Let's Start a Conversation
           </button>
         </div>

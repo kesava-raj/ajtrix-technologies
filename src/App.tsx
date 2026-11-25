@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import AboutSummary from './components/AboutSummary';
 import ServicesSummary from './components/ServicesSummary';
 import PortfolioSummary from './components/PortfolioSummary';
+import ContactSection from './components/ContactSection';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
@@ -14,8 +15,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
 import { useTheme } from './context/ThemeContext';
-import { ContactModalProvider } from './context/ContactContext';
-import ContactModal from './components/ui/contact-modal';
+import { ContactProvider } from './context/ContactContext';
 import './App.css';
 
 const HomePage = () => (
@@ -34,6 +34,9 @@ const HomePage = () => (
 
     {/* Testimonials */}
     <TestimonialSection />
+
+    {/* Contact Section */}
+    <ContactSection />
   </>
 );
 
@@ -42,7 +45,7 @@ function App() {
 
   return (
     <Router>
-      <ContactModalProvider>
+      <ContactProvider>
         <div className="app-container">
           <div className="background-canvas">
             <MoltenMetal 
@@ -70,10 +73,8 @@ function App() {
             {/* Footer */}
             <Footer />
           </div>
-          
-          <ContactModal />
         </div>
-      </ContactModalProvider>
+      </ContactProvider>
     </Router>
   );
 }

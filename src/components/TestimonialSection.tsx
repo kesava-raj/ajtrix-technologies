@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Star, Heart, X } from 'lucide-react';
+import { Star, X } from 'lucide-react';
 
 interface Testimonial {
   name: string;
@@ -62,20 +62,15 @@ const TestimonialSection = () => {
 
   return (
     <>
-      <section className="py-20 bg-transparent relative z-10">
+      <section className="py-16 sm:py-20 bg-transparent relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 rounded-full px-4 py-1 mb-6">
-              <Heart className="w-4 h-4 text-purple-500 fill-purple-500" />
-              <span className="text-sm font-medium text-gray-800 dark:text-gray-200">Testimonials & Case Studies</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Client's Feedback
+          <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
+              Our Client's <span className="text-indigo-600 dark:text-indigo-400">Feedback</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
               See how ajtrix is helping businesses scale and automate
             </p>
           </div>

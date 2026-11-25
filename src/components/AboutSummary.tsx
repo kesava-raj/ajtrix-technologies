@@ -5,12 +5,12 @@ import BorderBeamPanel from './ui/border-beam-panel';
 
 const AboutSummary: React.FC = () => {
   return (
-    <section className="py-24 px-6 md:px-12 relative z-10" id="about-summary">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 relative z-10" id="about-summary">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           {/* Left Side: Content */}
           <div className="w-full lg:w-1/2">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
               What We Bring to <br className="hidden md:block" />
               <span className="text-indigo-600 dark:text-indigo-400">the Table</span>
             </h2>
@@ -50,25 +50,25 @@ const AboutSummary: React.FC = () => {
           {/* Right Side: Visual */}
           <div className="w-full lg:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 blur-3xl rounded-full" />
-            <div className="relative bg-white/50 dark:bg-[#111330]/50 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 md:p-12 shadow-2xl">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="space-y-6">
-                  <BorderBeamPanel radius={16} className="p-6">
-                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">20+</h4>
+            <div className="relative bg-white/50 dark:bg-[#111330]/50 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl sm:rounded-[2rem] p-5 sm:p-8 md:p-12 shadow-2xl">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="space-y-4 sm:space-y-6">
+                  <BorderBeamPanel radius={16} className="p-5 sm:p-6">
+                    <h4 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">20+</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Projects Delivered</p>
                   </BorderBeamPanel>
-                  <BorderBeamPanel radius={16} className="p-6">
-                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">16+</h4>
+                  <BorderBeamPanel radius={16} className="p-5 sm:p-6">
+                    <h4 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">16+</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Industry Niches</p>
                   </BorderBeamPanel>
                 </div>
-                <div className="space-y-6 pt-12">
-                  <BorderBeamPanel radius={16} className="p-6">
-                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">3+</h4>
+                <div className="space-y-4 sm:space-y-6 sm:pt-12">
+                  <BorderBeamPanel radius={16} className="p-5 sm:p-6">
+                    <h4 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">3+</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
                   </BorderBeamPanel>
-                  <BorderBeamPanel radius={16} className="p-6">
-                    <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">4+</h4>
+                  <BorderBeamPanel radius={16} className="p-5 sm:p-6">
+                    <h4 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">4+</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Countries Served</p>
                   </BorderBeamPanel>
                 </div>

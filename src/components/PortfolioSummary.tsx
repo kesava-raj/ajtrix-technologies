@@ -28,14 +28,14 @@ const projects = [
 
 const PortfolioSummary: React.FC = () => {
   return (
-    <section className="py-24 px-6 md:px-12 relative z-10" id="portfolio-summary">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 relative z-10" id="portfolio-summary">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-gray-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight text-gray-900 dark:text-white">
               Featured <span className="text-indigo-600 dark:text-indigo-400">Work</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
               A glimpse into the digital solutions we've engineered for industry leaders. Real problems, elegant solutions.
             </p>
           </div>
@@ -50,19 +50,19 @@ const PortfolioSummary: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <Link to="/portfolio" key={project.id} className="group block relative rounded-[2rem] overflow-hidden bg-white dark:bg-[#111330] border border-gray-200 dark:border-white/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <div className="relative h-64 overflow-hidden">
+            <Link to="/portfolio" key={project.id} className="group block relative rounded-3xl sm:rounded-[2rem] overflow-hidden bg-white dark:bg-[#111330] border border-gray-200 dark:border-white/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <div className="relative h-56 sm:h-64 overflow-hidden">
                 <div className="absolute inset-0 bg-gray-900/10 dark:bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
                 <img 
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-4 right-4 z-20 bg-white/90 dark:bg-black/70 backdrop-blur-md p-2 rounded-full transform opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute top-4 right-4 z-20 bg-white/90 dark:bg-black/70 backdrop-blur-md p-2 rounded-full transform opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                   <ArrowUpRight className="w-5 h-5 text-gray-900 dark:text-white" />
                 </div>
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <span className="inline-block px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs font-semibold rounded-full mb-4">
                   {project.category}
                 </span>
